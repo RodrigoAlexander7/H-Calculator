@@ -32,3 +32,44 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
+.expo/
+.expo-shared/
+
+# macOS
+.DS_Store
+
+# Android Studio / Xcode (si hiciste eject)
+android/
+ios/
+
+# Builds locales
+*.apk
+*.aab
+*.ipa
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Expo Application Services (EAS)
+dist/
+build/
+
+# Metro bundler cache
+.cache/
