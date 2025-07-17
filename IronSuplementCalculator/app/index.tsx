@@ -4,12 +4,20 @@
  if app/hello/index.tsx 
  index.tsx -> represent the route '/hello'
 */
-import { StyleSheet, Text, View } from 'react-native';
+import { Link, useRouter } from 'expo-router';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
+  const route = useRouter();
+
   return (
     <View style={styles.container}>
-      <Text>Bienvenido!</Text>
+      <Text>Bienenido!</Text>
+      <Link href='/details'> View </Link>
+      <Button 
+        title='Go to Details'
+        onPress={()=> route.navigate('/details')} 
+      />
     </View>
   );
 }
