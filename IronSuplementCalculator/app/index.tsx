@@ -18,6 +18,10 @@ export default function HomeScreen() {
         title='Go to Details'
         onPress={()=> route.navigate('/details')} 
       />
+      <Button 
+        title='PONI'
+        onPress={()=> route.navigate('https://www.youtube.com/watch?v=ckfrrtk7bgE')} 
+      />
     </View>
   );
 }
