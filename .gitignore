@@ -67,6 +67,11 @@ ios/
 .env.local
 .env.*.local
 
+**/env/
+**/.env/
+**/venv/
+**/.venv/
+
 # Expo Application Services (EAS)
 dist/
 build/
