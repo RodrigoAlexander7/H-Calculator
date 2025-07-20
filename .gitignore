@@ -72,7 +72,7 @@ ios/
 **/venv/
 **/.venv/
 
-utils/json_data.json
+utils/data.json
 
 # Expo Application Services (EAS)
 dist/

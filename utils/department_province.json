@@ -1,0 +1,323 @@
+[
+  {
+    "department": "AMAZONAS",
+    "province": [
+      "BAGUA",
+      "BONGARA",
+      "CHACHAPOYAS",
+      "CONDORCANQUI",
+      "LUYA",
+      "RODRIGUEZ DE MENDOZA",
+      "UTCUBAMBA"
+    ]
+  },
+  {
+    "department": "ANCASH",
+    "province": [
+      "AIJA",
+      "ANTONIO RAYMONDI",
+      "ASUNCION",
+      "BOLOGNESI",
+      "CARHUAZ",
+      "CARLOS FERMIN FITZCARRALD",
+      "CASMA",
+      "CORONGO",
+      "HUARAZ",
+      "HUARI",
+      "HUARMEY",
+      "HUAYLAS",
+      "MARISCAL LUZURIAGA",
+      "OCROS",
+      "PALLASCA",
+      "POMABAMBA",
+      "RECUAY",
+      "SANTA",
+      "SIHUAS",
+      "YUNGAY"
+    ]
+  },
+  {
+    "department": "APURIMAC",
+    "province": [
+      "ABANCAY",
+      "ANDAHUAYLAS",
+      "ANTABAMBA",
+      "AYMARAES",
+      "CHINCHEROS",
+      "COTABAMBAS",
+      "GRAU"
+    ]
+  },
+  {
+    "department": "AREQUIPA",
+    "province": [
+      "AREQUIPA",
+      "CAMANA",
+      "CARAVELI",
+      "CASTILLA",
+      "CAYLLOMA",
+      "CONDESUYOS",
+      "ISLAY",
+      "LA UNION"
+    ]
+  },
+  {
+    "department": "AYACUCHO",
+    "province": [
+      "CANGALLO",
+      "HUAMANGA",
+      "HUANCA SANCOS",
+      "HUANTA",
+      "LA MAR",
+      "LUCANAS",
+      "PARINACOCHAS",
+      "PAUCAR DEL SARA SARA",
+      "SUCRE",
+      "VICTOR FAJARDO",
+      "VILCAS HUAMAN"
+    ]
+  },
+  {
+    "department": "CAJAMARCA",
+    "province": [
+      "CAJABAMBA",
+      "CAJAMARCA",
+      "CELENDIN",
+      "CHOTA",
+      "CONTUMAZA",
+      "CUTERVO",
+      "HUALGAYOC",
+      "JAEN",
+      "SAN IGNACIO",
+      "SAN MARCOS",
+      "SAN MIGUEL",
+      "SAN PABLO",
+      "SANTA CRUZ"
+    ]
+  },
+  {
+    "department": "CALLAO",
+    "province": [
+      "CALLAO"
+    ]
+  },
+  {
+    "department": "CUSCO",
+    "province": [
+      "ACOMAYO",
+      "ANTA",
+      "CALCA",
+      "CANAS",
+      "CANCHIS",
+      "CHUMBIVILCAS",
+      "CUSCO",
+      "ESPINAR",
+      "LA CONVENCION",
+      "PARURO",
+      "PAUCARTAMBO",
+      "QUISPICANCHI",
+      "URUBAMBA"
+    ]
+  },
+  {
+    "department": "HUANCAVELICA",
+    "province": [
+      "ACOBAMBA",
+      "ANGARAES",
+      "CASTROVIRREYNA",
+      "CHURCAMPA",
+      "HUANCAVELICA",
+      "HUAYTARA",
+      "TAYACAJA"
+    ]
+  },
+  {
+    "department": "HUANUCO",
+    "province": [
+      "AMBO",
+      "DOS DE MAYO",
+      "HUACAYBAMBA",
+      "HUAMALIES",
+      "HUANUCO",
+      "LAURICOCHA",
+      "LEONCIO PRADO",
+      "MARAÑON",
+      "PACHITEA",
+      "PUERTO INCA",
+      "YAROWILCA"
+    ]
+  },
+  {
+    "department": "ICA",
+    "province": [
+      "CHINCHA",
+      "ICA",
+      "NASCA",
+      "PALPA",
+      "PISCO"
+    ]
+  },
+  {
+    "department": "JUNIN",
+    "province": [
+      "CHANCHAMAYO",
+      "CHUPACA",
+      "CONCEPCION",
+      "HUANCAYO",
+      "JAUJA",
+      "JUNIN",
+      "SATIPO",
+      "TARMA",
+      "YAULI"
+    ]
+  },
+  {
+    "department": "LA LIBERTAD",
+    "province": [
+      "ASCOPE",
+      "BOLIVAR",
+      "CHEPEN",
+      "GRAN CHIMU",
+      "JULCAN",
+      "OTUZCO",
+      "PACASMAYO",
+      "PATAZ",
+      "SANCHEZ CARRION",
+      "SANTIAGO DE CHUCO",
+      "TRUJILLO",
+      "VIRU"
+    ]
+  },
+  {
+    "department": "LAMBAYEQUE",
+    "province": [
+      "CHICLAYO",
+      "FERREÑAFE",
+      "LAMBAYEQUE"
+    ]
+  },
+  {
+    "department": "LIMA",
+    "province": [
+      "LIMA",
+      "BARRANCA",
+      "CAJATAMBO",
+      "CANTA",
+      "CAÑETE",
+      "HUARAL",
+      "HUAROCHIRI",
+      "HUAURA",
+      "OYON",
+      "YAUYOS"
+    ]
+  },
+  {
+    "department": "LORETO",
+    "province": [
+      "ALTO AMAZONAS",
+      "DATEM DEL MARAÑON",
+      "LORETO",
+      "MARISCAL RAMON CASTILLA",
+      "MAYNAS",
+      "PUTUMAYO",
+      "REQUENA",
+      "UCAYALI"
+    ]
+  },
+  {
+    "department": "MADRE DE DIOS",
+    "province": [
+      "MANU",
+      "TAHUAMANU",
+      "TAMBOPATA"
+    ]
+  },
+  {
+    "department": "MOQUEGUA",
+    "province": [
+      "GENERAL SANCHEZ CERRO",
+      "ILO",
+      "MARISCAL NIETO"
+    ]
+  },
+  {
+    "department": "PASCO",
+    "province": [
+      "DANIEL ALCIDES CARRION",
+      "OXAPAMPA",
+      "PASCO"
+    ]
+  },
+  {
+    "department": "PIURA",
+    "province": [
+      "AYABACA",
+      "HUANCABAMBA",
+      "MORROPON",
+      "PAITA",
+      "PIURA",
+      "SECHURA",
+      "SULLANA",
+      "TALARA"
+    ]
+  },
+  {
+    "department": "PUNO",
+    "province": [
+      "AZANGARO",
+      "CARABAYA",
+      "CHUCUITO",
+      "EL COLLAO",
+      "HUANCANE",
+      "LAMPA",
+      "MELGAR",
+      "MOHO",
+      "PUNO",
+      "SAN ANTONIO DE PUTINA",
+      "SAN ROMAN",
+      "SANDIA",
+      "YUNGUYO"
+    ]
+  },
+  {
+    "department": "SAN MARTIN",
+    "province": [
+      "BELLAVISTA",
+      "EL DORADO",
+      "HUALLAGA",
+      "LAMAS",
+      "MARISCAL CACERES",
+      "MOYOBAMBA",
+      "PICOTA",
+      "RIOJA",
+      "SAN MARTIN",
+      "TOCACHE"
+    ]
+  },
+  {
+    "department": "TACNA",
+    "province": [
+      "CANDARAVE",
+      "JORGE BASADRE",
+      "TACNA",
+      "TARATA"
+    ]
+  },
+  {
+    "department": "TUMBES",
+    "province": [
+      "CONTRALMIRANTE VILLAR",
+      "TUMBES",
+      "ZARUMILLA"
+    ]
+  },
+  {
+    "department": "UCAYALI",
+    "province": [
+      "ATALAYA",
+      "CORONEL PORTILLO",
+      "PADRE ABAD",
+      "PURUS"
+    ]
+  }
+]
