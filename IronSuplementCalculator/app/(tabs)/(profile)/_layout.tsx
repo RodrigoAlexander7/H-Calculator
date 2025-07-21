@@ -6,7 +6,7 @@ import { Stack } from "expo-router";
 export default function ProfileLayout() {
   return (
     <Stack screenOptions={stylesScreenOptions}>
-      <Stack.Screen name="index" />
+      <Stack.Screen name="home" />
       <Stack.Screen name="details" />
     </Stack>
   );
