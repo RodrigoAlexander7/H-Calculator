@@ -1,17 +1,36 @@
 import { useState } from 'react';
 import { Button, Picker, PickerValue, Text, View } from 'react-native-ui-lib';
+import department_province from '../../../utils/department_province.json';
 import departments from '../../../utils/departments.json';
 
-type Province = string
+type Location = string
 
 export default function DiagnosticScreen() {
-   const [province,setProvince] = useState<Province>('')
+   const [department,setDepartment] = useState<Location>('')
+   const [province,setProvince] = useState<Location>('')
 
+   const provinceList = 
+   department_province.find((d) => d.department === department)?.province || []
 
+   const provinceItems = 
+   provinceList.map((prov)=>(
+      {
+         label: prov,
+         value: prov
+      }
+   ))
 
-   const onDataChange = (value:PickerValue) => {
-      if(typeof value === 'string') setProvince(value)
-      else console.warn('invalid province value')
+   const onLocationChange = (key:'department'|'province') =>(value:PickerValue) => {
+      if(typeof value !== 'string'){
+         console.warn('invalid province value')
+         return
+      } 
+      
+      if(key === 'department'){
+         setDepartment(value)
+         setProvince('')
+      } 
+      if(key === 'province') setProvince(value)
    }
 
    return(
@@ -23,8 +42,17 @@ export default function DiagnosticScreen() {
                labelColor= 'black'
                placeholder='Departamento'
                items = {departments}
+               value={department}
+               onChange={onLocationChange('department')}
+            />
+            <Picker
+               preset='outline'
+               label='Selecciona Provincia'
+               labelColor= 'black'
+               placeholder='Provincia'
+               items = {provinceItems}
                value={province}
-               onChange={onDataChange}
+               onChange={onLocationChange('province')}
             />
 
             <Text>Calcular diagnostico</Text>   
