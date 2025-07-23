@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import { Button, Picker, PickerValue, Text, View } from 'react-native-ui-lib';
+import departments from '../../../utils/departments.json';
 
 type Province = string
 
 export default function DiagnosticScreen() {
    const [province,setProvince] = useState<Province>('')
 
-   const items = [
-      { label:'Arequipa', value: 'arequipa',},
-      { label:'Lima', value: 'lima',}
-   ]
 
-   const onProvinceChange = (value:PickerValue) => {
+
+   const onDataChange = (value:PickerValue) => {
       if(typeof value === 'string') setProvince(value)
       else console.warn('invalid province value')
    }
@@ -21,13 +19,14 @@ export default function DiagnosticScreen() {
          <View centerH>
             <Picker
                preset='outline'
-               label='Selecciona Provincia'
+               label='Selecciona Departamento'
                labelColor= 'black'
-               placeholder='Provincia'
-               items = {items}
+               placeholder='Departamento'
+               items = {departments}
                value={province}
-               onChange={onProvinceChange}
+               onChange={onDataChange}
             />
+
             <Text>Calcular diagnostico</Text>   
             <Button
                label='Calcular'   
