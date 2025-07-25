@@ -2,6 +2,12 @@ import { useState } from 'react';
 import { Button, Picker, PickerValue, Text, View } from 'react-native-ui-lib';
 import department_province from '../../../utils/department_province.json';
 import departments from '../../../utils/departments.json';
+import district_town from '../../../utils/district_town.json';
+import province_district from '../../../utils/province_district.json';
+import townAdjustHbJson from '../../../utils/town_adjustHB.json';
+
+// adding this cause otherwise don't read it cause is too large
+const town_adjustHB:       TupleJson = townAdjustHbJson       as TupleJson;
 
 type Location = string
 type LocationKey = 'department'|'province'|'district'|'town'|'adjustHB'
@@ -11,6 +17,7 @@ type Tuple = {
 }
 type TupleJson = Tuple[]
 
+
 const getItem = (tuple: TupleJson, location:Location) => {
    const locationList = tuple.find((d) => d.location === location )?.sublocation || []
    const sublocation = locationList.map((sub)=>(
@@ -19,22 +26,21 @@ const getItem = (tuple: TupleJson, location:Location) => {
          value: sub,
       }
    ))
+   return sublocation
 }
 
 
 export default function DiagnosticScreen() {
    const [department,setDepartment] = useState<Location>('')
    const [province,setProvince] = useState<Location>('')
+   const [district,setDistrict] = useState<Location>('')
+   const [town,setTown] = useState<Location>('')
+   const [adjustHB,setAdjustHB] = useState<Location>('')
 
-   const provinceList = 
-   department_province.find((d) => d.department === department)?.province || []
-   const provinceItems = 
-   provinceList.map((prov)=>(
-      {
-         label: prov,
-         value: prov
-      }
-   ))
+   const provinceItems = getItem(department_province, department)
+   const districtItems = getItem(province_district, province)
+   const townItems = getItem(district_town, district)
+   const numberHB = getItem(town_adjustHB, adjustHB)
 
 
    const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
@@ -46,7 +52,18 @@ export default function DiagnosticScreen() {
          setDepartment(value)
          setProvince('')
       } 
-      if(key === 'province') setProvince(value)
+      if(key === 'province'){
+         setProvince(value)
+      } 
+      if(key === 'district'){
+         setDistrict(value)
+      }
+      if(key === 'town'){
+         setTown(value)
+      }
+      if(key === 'adjustHB'){
+         setAdjustHB(value)
+      }
    }
 
    return(
@@ -82,9 +99,21 @@ export default function DiagnosticScreen() {
                editable={province !== ''}
                showSearch
                searchStyle={{color:'black'}}
-               items = {provinceItems}
-               value={province}
-               onChange={onLocationChange('province')}
+               items = {districtItems}
+               value={district}
+               onChange={onLocationChange('district')}
+            />
+            <Picker
+               preset='outline'
+               label='Selecciona Centro Poblado'
+               labelColor= 'black'
+               placeholder='Centro Poblado'
+               editable={district !== ''}
+               showSearch
+               searchStyle={{color:'black'}}
+               items = {townItems}
+               value={town}
+               onChange={onLocationChange('town')}
             />
 
             <Text>Calcular diagnostico</Text>   
