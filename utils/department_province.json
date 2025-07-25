@@ -1,7 +1,7 @@
 [
   {
-    "department": "AMAZONAS",
-    "province": [
+    "departamento": "AMAZONAS",
+    "provincia": [
       "BAGUA",
       "BONGARA",
       "CHACHAPOYAS",
@@ -12,8 +12,8 @@
     ]
   },
   {
-    "department": "ANCASH",
-    "province": [
+    "departamento": "ANCASH",
+    "provincia": [
       "AIJA",
       "ANTONIO RAYMONDI",
       "ASUNCION",
@@ -37,8 +37,8 @@
     ]
   },
   {
-    "department": "APURIMAC",
-    "province": [
+    "departamento": "APURIMAC",
+    "provincia": [
       "ABANCAY",
       "ANDAHUAYLAS",
       "ANTABAMBA",
@@ -49,8 +49,8 @@
     ]
   },
   {
-    "department": "AREQUIPA",
-    "province": [
+    "departamento": "AREQUIPA",
+    "provincia": [
       "AREQUIPA",
       "CAMANA",
       "CARAVELI",
@@ -62,8 +62,8 @@
     ]
   },
   {
-    "department": "AYACUCHO",
-    "province": [
+    "departamento": "AYACUCHO",
+    "provincia": [
       "CANGALLO",
       "HUAMANGA",
       "HUANCA SANCOS",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "department": "CAJAMARCA",
-    "province": [
+    "departamento": "CAJAMARCA",
+    "provincia": [
       "CAJABAMBA",
       "CAJAMARCA",
       "CELENDIN",
@@ -96,14 +96,14 @@
     ]
   },
   {
-    "department": "CALLAO",
-    "province": [
+    "departamento": "CALLAO",
+    "provincia": [
       "CALLAO"
     ]
   },
   {
-    "department": "CUSCO",
-    "province": [
+    "departamento": "CUSCO",
+    "provincia": [
       "ACOMAYO",
       "ANTA",
       "CALCA",
@@ -120,8 +120,8 @@
     ]
   },
   {
-    "department": "HUANCAVELICA",
-    "province": [
+    "departamento": "HUANCAVELICA",
+    "provincia": [
       "ACOBAMBA",
       "ANGARAES",
       "CASTROVIRREYNA",
@@ -132,8 +132,8 @@
     ]
   },
   {
-    "department": "HUANUCO",
-    "province": [
+    "departamento": "HUANUCO",
+    "provincia": [
       "AMBO",
       "DOS DE MAYO",
       "HUACAYBAMBA",
@@ -148,8 +148,8 @@
     ]
   },
   {
-    "department": "ICA",
-    "province": [
+    "departamento": "ICA",
+    "provincia": [
       "CHINCHA",
       "ICA",
       "NASCA",
@@ -158,8 +158,8 @@
     ]
   },
   {
-    "department": "JUNIN",
-    "province": [
+    "departamento": "JUNIN",
+    "provincia": [
       "CHANCHAMAYO",
       "CHUPACA",
       "CONCEPCION",
@@ -172,8 +172,8 @@
     ]
   },
   {
-    "department": "LA LIBERTAD",
-    "province": [
+    "departamento": "LA LIBERTAD",
+    "provincia": [
       "ASCOPE",
       "BOLIVAR",
       "CHEPEN",
@@ -189,16 +189,16 @@
     ]
   },
   {
-    "department": "LAMBAYEQUE",
-    "province": [
+    "departamento": "LAMBAYEQUE",
+    "provincia": [
       "CHICLAYO",
       "FERREÑAFE",
       "LAMBAYEQUE"
     ]
   },
   {
-    "department": "LIMA",
-    "province": [
+    "departamento": "LIMA",
+    "provincia": [
       "LIMA",
       "BARRANCA",
       "CAJATAMBO",
@@ -212,8 +212,8 @@
     ]
   },
   {
-    "department": "LORETO",
-    "province": [
+    "departamento": "LORETO",
+    "provincia": [
       "ALTO AMAZONAS",
       "DATEM DEL MARAÑON",
       "LORETO",
@@ -225,32 +225,32 @@
     ]
   },
   {
-    "department": "MADRE DE DIOS",
-    "province": [
+    "departamento": "MADRE DE DIOS",
+    "provincia": [
       "MANU",
       "TAHUAMANU",
       "TAMBOPATA"
     ]
   },
   {
-    "department": "MOQUEGUA",
-    "province": [
+    "departamento": "MOQUEGUA",
+    "provincia": [
       "GENERAL SANCHEZ CERRO",
       "ILO",
       "MARISCAL NIETO"
     ]
   },
   {
-    "department": "PASCO",
-    "province": [
+    "departamento": "PASCO",
+    "provincia": [
       "DANIEL ALCIDES CARRION",
       "OXAPAMPA",
       "PASCO"
     ]
   },
   {
-    "department": "PIURA",
-    "province": [
+    "departamento": "PIURA",
+    "provincia": [
       "AYABACA",
       "HUANCABAMBA",
       "MORROPON",
@@ -262,8 +262,8 @@
     ]
   },
   {
-    "department": "PUNO",
-    "province": [
+    "departamento": "PUNO",
+    "provincia": [
       "AZANGARO",
       "CARABAYA",
       "CHUCUITO",
@@ -280,8 +280,8 @@
     ]
   },
   {
-    "department": "SAN MARTIN",
-    "province": [
+    "departamento": "SAN MARTIN",
+    "provincia": [
       "BELLAVISTA",
       "EL DORADO",
       "HUALLAGA",
@@ -295,8 +295,8 @@
     ]
   },
   {
-    "department": "TACNA",
-    "province": [
+    "departamento": "TACNA",
+    "provincia": [
       "CANDARAVE",
       "JORGE BASADRE",
       "TACNA",
@@ -304,16 +304,16 @@
     ]
   },
   {
-    "department": "TUMBES",
-    "province": [
+    "departamento": "TUMBES",
+    "provincia": [
       "CONTRALMIRANTE VILLAR",
       "TUMBES",
       "ZARUMILLA"
     ]
   },
   {
-    "department": "UCAYALI",
-    "province": [
+    "departamento": "UCAYALI",
+    "provincia": [
       "ATALAYA",
       "CORONEL PORTILLO",
       "PADRE ABAD",

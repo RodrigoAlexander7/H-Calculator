@@ -5,13 +5,14 @@ import departments from '../../../utils/departments.json';
 
 type Location = string
 
+
+
 export default function DiagnosticScreen() {
    const [department,setDepartment] = useState<Location>('')
    const [province,setProvince] = useState<Location>('')
 
    const provinceList = 
    department_province.find((d) => d.department === department)?.province || []
-
    const provinceItems = 
    provinceList.map((prov)=>(
       {
@@ -19,6 +20,8 @@ export default function DiagnosticScreen() {
          value: prov
       }
    ))
+
+   
 
    const onLocationChange = (key:'department'|'province') =>(value:PickerValue) => {
       if(typeof value !== 'string'){
@@ -37,6 +40,7 @@ export default function DiagnosticScreen() {
       <View useSafeArea>
          <View centerH>
             <Picker
+               showSearch
                preset='outline'
                label='Selecciona Departamento'
                labelColor= 'black'
@@ -50,6 +54,21 @@ export default function DiagnosticScreen() {
                label='Selecciona Provincia'
                labelColor= 'black'
                placeholder='Provincia'
+               editable={department !== ''}
+               showSearch
+               searchStyle={{color:'black'}}
+               items = {provinceItems}
+               value={province}
+               onChange={onLocationChange('province')}
+            />
+            <Picker
+               preset='outline'
+               label='Selecciona Distrito'
+               labelColor= 'black'
+               placeholder='Distrito'
+               editable={province !== ''}
+               showSearch
+               searchStyle={{color:'black'}}
                items = {provinceItems}
                value={province}
                onChange={onLocationChange('province')}
