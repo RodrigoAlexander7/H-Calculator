@@ -40,7 +40,6 @@ export default function DiagnosticScreen() {
    const provinceItems = getItem(department_province, department)
    const districtItems = getItem(province_district, province)
    const townItems = getItem(district_town, district)
-   const numberHB = getItem(town_adjustHB, adjustHB)
 
 
    const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
@@ -60,9 +59,10 @@ export default function DiagnosticScreen() {
       }
       if(key === 'town'){
          setTown(value)
+         const numberHB = getItem(town_adjustHB, value)
+         setAdjustHB(numberHB[0].value)
       }
       if(key === 'adjustHB'){
-         setAdjustHB(value)
       }
    }
 
@@ -119,7 +119,7 @@ export default function DiagnosticScreen() {
             <Text>Calcular diagnostico</Text>   
             <Button
                label='Calcular'   
-               onPress = {()=>console.log('si funka')}
+               onPress = {()=>console.log(adjustHB)}
             />
          </View>   
       </View>
