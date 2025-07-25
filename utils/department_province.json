@@ -1,7 +1,7 @@
 [
   {
-    "departamento": "AMAZONAS",
-    "provincia": [
+    "location": "AMAZONAS",
+    "sublocation": [
       "BAGUA",
       "BONGARA",
       "CHACHAPOYAS",
@@ -12,8 +12,8 @@
     ]
   },
   {
-    "departamento": "ANCASH",
-    "provincia": [
+    "location": "ANCASH",
+    "sublocation": [
       "AIJA",
       "ANTONIO RAYMONDI",
       "ASUNCION",
@@ -37,8 +37,8 @@
     ]
   },
   {
-    "departamento": "APURIMAC",
-    "provincia": [
+    "location": "APURIMAC",
+    "sublocation": [
       "ABANCAY",
       "ANDAHUAYLAS",
       "ANTABAMBA",
@@ -49,8 +49,8 @@
     ]
   },
   {
-    "departamento": "AREQUIPA",
-    "provincia": [
+    "location": "AREQUIPA",
+    "sublocation": [
       "AREQUIPA",
       "CAMANA",
       "CARAVELI",
@@ -62,8 +62,8 @@
     ]
   },
   {
-    "departamento": "AYACUCHO",
-    "provincia": [
+    "location": "AYACUCHO",
+    "sublocation": [
       "CANGALLO",
       "HUAMANGA",
       "HUANCA SANCOS",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "departamento": "CAJAMARCA",
-    "provincia": [
+    "location": "CAJAMARCA",
+    "sublocation": [
       "CAJABAMBA",
       "CAJAMARCA",
       "CELENDIN",
@@ -96,14 +96,14 @@
     ]
   },
   {
-    "departamento": "CALLAO",
-    "provincia": [
+    "location": "CALLAO",
+    "sublocation": [
       "CALLAO"
     ]
   },
   {
-    "departamento": "CUSCO",
-    "provincia": [
+    "location": "CUSCO",
+    "sublocation": [
       "ACOMAYO",
       "ANTA",
       "CALCA",
@@ -120,8 +120,8 @@
     ]
   },
   {
-    "departamento": "HUANCAVELICA",
-    "provincia": [
+    "location": "HUANCAVELICA",
+    "sublocation": [
       "ACOBAMBA",
       "ANGARAES",
       "CASTROVIRREYNA",
@@ -132,8 +132,8 @@
     ]
   },
   {
-    "departamento": "HUANUCO",
-    "provincia": [
+    "location": "HUANUCO",
+    "sublocation": [
       "AMBO",
       "DOS DE MAYO",
       "HUACAYBAMBA",
@@ -148,8 +148,8 @@
     ]
   },
   {
-    "departamento": "ICA",
-    "provincia": [
+    "location": "ICA",
+    "sublocation": [
       "CHINCHA",
       "ICA",
       "NASCA",
@@ -158,8 +158,8 @@
     ]
   },
   {
-    "departamento": "JUNIN",
-    "provincia": [
+    "location": "JUNIN",
+    "sublocation": [
       "CHANCHAMAYO",
       "CHUPACA",
       "CONCEPCION",
@@ -172,8 +172,8 @@
     ]
   },
   {
-    "departamento": "LA LIBERTAD",
-    "provincia": [
+    "location": "LA LIBERTAD",
+    "sublocation": [
       "ASCOPE",
       "BOLIVAR",
       "CHEPEN",
@@ -189,16 +189,16 @@
     ]
   },
   {
-    "departamento": "LAMBAYEQUE",
-    "provincia": [
+    "location": "LAMBAYEQUE",
+    "sublocation": [
       "CHICLAYO",
       "FERREÑAFE",
       "LAMBAYEQUE"
     ]
   },
   {
-    "departamento": "LIMA",
-    "provincia": [
+    "location": "LIMA",
+    "sublocation": [
       "LIMA",
       "BARRANCA",
       "CAJATAMBO",
@@ -212,8 +212,8 @@
     ]
   },
   {
-    "departamento": "LORETO",
-    "provincia": [
+    "location": "LORETO",
+    "sublocation": [
       "ALTO AMAZONAS",
       "DATEM DEL MARAÑON",
       "LORETO",
@@ -225,32 +225,32 @@
     ]
   },
   {
-    "departamento": "MADRE DE DIOS",
-    "provincia": [
+    "location": "MADRE DE DIOS",
+    "sublocation": [
       "MANU",
       "TAHUAMANU",
       "TAMBOPATA"
     ]
   },
   {
-    "departamento": "MOQUEGUA",
-    "provincia": [
+    "location": "MOQUEGUA",
+    "sublocation": [
       "GENERAL SANCHEZ CERRO",
       "ILO",
       "MARISCAL NIETO"
     ]
   },
   {
-    "departamento": "PASCO",
-    "provincia": [
+    "location": "PASCO",
+    "sublocation": [
       "DANIEL ALCIDES CARRION",
       "OXAPAMPA",
       "PASCO"
     ]
   },
   {
-    "departamento": "PIURA",
-    "provincia": [
+    "location": "PIURA",
+    "sublocation": [
       "AYABACA",
       "HUANCABAMBA",
       "MORROPON",
@@ -262,8 +262,8 @@
     ]
   },
   {
-    "departamento": "PUNO",
-    "provincia": [
+    "location": "PUNO",
+    "sublocation": [
       "AZANGARO",
       "CARABAYA",
       "CHUCUITO",
@@ -280,8 +280,8 @@
     ]
   },
   {
-    "departamento": "SAN MARTIN",
-    "provincia": [
+    "location": "SAN MARTIN",
+    "sublocation": [
       "BELLAVISTA",
       "EL DORADO",
       "HUALLAGA",
@@ -295,8 +295,8 @@
     ]
   },
   {
-    "departamento": "TACNA",
-    "provincia": [
+    "location": "TACNA",
+    "sublocation": [
       "CANDARAVE",
       "JORGE BASADRE",
       "TACNA",
@@ -304,16 +304,16 @@
     ]
   },
   {
-    "departamento": "TUMBES",
-    "provincia": [
+    "location": "TUMBES",
+    "sublocation": [
       "CONTRALMIRANTE VILLAR",
       "TUMBES",
       "ZARUMILLA"
     ]
   },
   {
-    "departamento": "UCAYALI",
-    "provincia": [
+    "location": "UCAYALI",
+    "sublocation": [
       "ATALAYA",
       "CORONEL PORTILLO",
       "PADRE ABAD",

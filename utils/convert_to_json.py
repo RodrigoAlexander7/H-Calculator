@@ -16,8 +16,8 @@ def get_location_tuples(location:str, sublocation:str):
    )
    structure =[
       {
-         location.lower() : row[location],
-         sublocation.lower() : row[sublocation]
+         'location' : row[location],
+         'sublocation' : row[sublocation]
       }
       for _,row in location_sublocation.iterrows()
    ]

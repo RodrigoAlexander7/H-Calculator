@@ -1,7 +1,7 @@
 [
   {
-    "provincia": "ABANCAY",
-    "distrito": [
+    "location": "ABANCAY",
+    "sublocation": [
       "ABANCAY",
       "CHACOCHE",
       "CIRCA",
@@ -14,8 +14,8 @@
     ]
   },
   {
-    "provincia": "ACOBAMBA",
-    "distrito": [
+    "location": "ACOBAMBA",
+    "sublocation": [
       "ACOBAMBA",
       "ANDABAMBA",
       "ANTA",
@@ -27,8 +27,8 @@
     ]
   },
   {
-    "provincia": "ACOMAYO",
-    "distrito": [
+    "location": "ACOMAYO",
+    "sublocation": [
       "ACOMAYO",
       "ACOPIA",
       "ACOS",
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "provincia": "AIJA",
-    "distrito": [
+    "location": "AIJA",
+    "sublocation": [
       "AIJA",
       "CORIS",
       "HUACLLAN",
@@ -49,8 +49,8 @@
     ]
   },
   {
-    "provincia": "ALTO AMAZONAS",
-    "distrito": [
+    "location": "ALTO AMAZONAS",
+    "sublocation": [
       "BALSAPUERTO",
       "JEBEROS",
       "LAGUNAS",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "provincia": "AMBO",
-    "distrito": [
+    "location": "AMBO",
+    "sublocation": [
       "AMBO",
       "CAYNA",
       "COLPAS",
@@ -73,8 +73,8 @@
     ]
   },
   {
-    "provincia": "ANDAHUAYLAS",
-    "distrito": [
+    "location": "ANDAHUAYLAS",
+    "sublocation": [
       "ANDAHUAYLAS",
       "ANDARAPA",
       "CHIARA",
@@ -98,8 +98,8 @@
     ]
   },
   {
-    "provincia": "ANGARAES",
-    "distrito": [
+    "location": "ANGARAES",
+    "sublocation": [
       "ANCHONGA",
       "CALLANMARCA",
       "CCOCHACCASA",
@@ -115,8 +115,8 @@
     ]
   },
   {
-    "provincia": "ANTA",
-    "distrito": [
+    "location": "ANTA",
+    "sublocation": [
       "ANCAHUASI",
       "ANTA",
       "CACHIMAYO",
@@ -129,8 +129,8 @@
     ]
   },
   {
-    "provincia": "ANTABAMBA",
-    "distrito": [
+    "location": "ANTABAMBA",
+    "sublocation": [
       "ANTABAMBA",
       "EL ORO",
       "HUAQUIRCA",
@@ -141,8 +141,8 @@
     ]
   },
   {
-    "provincia": "ANTONIO RAYMONDI",
-    "distrito": [
+    "location": "ANTONIO RAYMONDI",
+    "sublocation": [
       "ACZO",
       "CHACCHO",
       "CHINGAS",
@@ -152,8 +152,8 @@
     ]
   },
   {
-    "provincia": "AREQUIPA",
-    "distrito": [
+    "location": "AREQUIPA",
+    "sublocation": [
       "ALTO SELVA ALEGRE",
       "AREQUIPA",
       "CAYMA",
@@ -186,8 +186,8 @@
     ]
   },
   {
-    "provincia": "ASCOPE",
-    "distrito": [
+    "location": "ASCOPE",
+    "sublocation": [
       "ASCOPE",
       "CASA GRANDE",
       "CHICAMA",
@@ -199,15 +199,15 @@
     ]
   },
   {
-    "provincia": "ASUNCION",
-    "distrito": [
+    "location": "ASUNCION",
+    "sublocation": [
       "ACOCHACA",
       "CHACAS"
     ]
   },
   {
-    "provincia": "ATALAYA",
-    "distrito": [
+    "location": "ATALAYA",
+    "sublocation": [
       "RAIMONDI",
       "SEPAHUA",
       "TAHUANIA",
@@ -215,8 +215,8 @@
     ]
   },
   {
-    "provincia": "AYABACA",
-    "distrito": [
+    "location": "AYABACA",
+    "sublocation": [
       "AYABACA",
       "FRIAS",
       "JILILI",
@@ -230,8 +230,8 @@
     ]
   },
   {
-    "provincia": "AYMARAES",
-    "distrito": [
+    "location": "AYMARAES",
+    "sublocation": [
       "CAPAYA",
       "CARAYBAMBA",
       "CHALHUANCA",
@@ -252,8 +252,8 @@
     ]
   },
   {
-    "provincia": "AZANGARO",
-    "distrito": [
+    "location": "AZANGARO",
+    "sublocation": [
       "ACHAYA",
       "ARAPA",
       "ASILLO",
@@ -272,8 +272,8 @@
     ]
   },
   {
-    "provincia": "BAGUA",
-    "distrito": [
+    "location": "BAGUA",
+    "sublocation": [
       "ARAMANGO",
       "BAGUA",
       "COPALLIN",
@@ -283,8 +283,8 @@
     ]
   },
   {
-    "provincia": "BARRANCA",
-    "distrito": [
+    "location": "BARRANCA",
+    "sublocation": [
       "BARRANCA",
       "PARAMONGA",
       "PATIVILCA",
@@ -293,8 +293,8 @@
     ]
   },
   {
-    "provincia": "BELLAVISTA",
-    "distrito": [
+    "location": "BELLAVISTA",
+    "sublocation": [
       "ALTO BIAVO",
       "BAJO BIAVO",
       "BELLAVISTA",
@@ -304,8 +304,8 @@
     ]
   },
   {
-    "provincia": "BOLIVAR",
-    "distrito": [
+    "location": "BOLIVAR",
+    "sublocation": [
       "BAMBAMARCA",
       "BOLIVAR",
       "CONDORMARCA",
@@ -315,8 +315,8 @@
     ]
   },
   {
-    "provincia": "BOLOGNESI",
-    "distrito": [
+    "location": "BOLOGNESI",
+    "sublocation": [
       "ABELARDO PARDO LEZAMETA",
       "ANTONIO RAYMONDI",
       "AQUIA",
@@ -335,8 +335,8 @@
     ]
   },
   {
-    "provincia": "BONGARA",
-    "distrito": [
+    "location": "BONGARA",
+    "sublocation": [
       "CHISQUILLA",
       "CHURUJA",
       "COROSHA",
@@ -352,8 +352,8 @@
     ]
   },
   {
-    "provincia": "CAJABAMBA",
-    "distrito": [
+    "location": "CAJABAMBA",
+    "sublocation": [
       "CACHACHI",
       "CAJABAMBA",
       "CONDEBAMBA",
@@ -361,8 +361,8 @@
     ]
   },
   {
-    "provincia": "CAJAMARCA",
-    "distrito": [
+    "location": "CAJAMARCA",
+    "sublocation": [
       "ASUNCION",
       "CAJAMARCA",
       "CHETILLA",
@@ -378,8 +378,8 @@
     ]
   },
   {
-    "provincia": "CAJATAMBO",
-    "distrito": [
+    "location": "CAJATAMBO",
+    "sublocation": [
       "CAJATAMBO",
       "COPA",
       "GORGOR",
@@ -388,8 +388,8 @@
     ]
   },
   {
-    "provincia": "CALCA",
-    "distrito": [
+    "location": "CALCA",
+    "sublocation": [
       "CALCA",
       "COYA",
       "LAMAY",
@@ -401,8 +401,8 @@
     ]
   },
   {
-    "provincia": "CALLAO",
-    "distrito": [
+    "location": "CALLAO",
+    "sublocation": [
       "BELLAVISTA",
       "CALLAO",
       "CARMEN DE LA LEGUA REYNOSO",
@@ -413,8 +413,8 @@
     ]
   },
   {
-    "provincia": "CAMANA",
-    "distrito": [
+    "location": "CAMANA",
+    "sublocation": [
       "CAMANA",
       "JOSE MARIA QUIMPER",
       "MARIANO NICOLAS VALCARCEL",
@@ -426,8 +426,8 @@
     ]
   },
   {
-    "provincia": "CANAS",
-    "distrito": [
+    "location": "CANAS",
+    "sublocation": [
       "CHECCA",
       "KUNTURKANKI",
       "LANGUI",
@@ -439,8 +439,8 @@
     ]
   },
   {
-    "provincia": "CANCHIS",
-    "distrito": [
+    "location": "CANCHIS",
+    "sublocation": [
       "CHECACUPE",
       "COMBAPATA",
       "MARANGANI",
@@ -452,8 +452,8 @@
     ]
   },
   {
-    "provincia": "CANDARAVE",
-    "distrito": [
+    "location": "CANDARAVE",
+    "sublocation": [
       "CAIRANI",
       "CAMILACA",
       "CANDARAVE",
@@ -463,8 +463,8 @@
     ]
   },
   {
-    "provincia": "CANGALLO",
-    "distrito": [
+    "location": "CANGALLO",
+    "sublocation": [
       "CANGALLO",
       "CHUSCHI",
       "LOS MOROCHUCOS",
@@ -474,8 +474,8 @@
     ]
   },
   {
-    "provincia": "CANTA",
-    "distrito": [
+    "location": "CANTA",
+    "sublocation": [
       "ARAHUAY",
       "CANTA",
       "HUAMANTANGA",
@@ -486,8 +486,8 @@
     ]
   },
   {
-    "provincia": "CARABAYA",
-    "distrito": [
+    "location": "CARABAYA",
+    "sublocation": [
       "AJOYANI",
       "AYAPATA",
       "COASA",
@@ -501,8 +501,8 @@
     ]
   },
   {
-    "provincia": "CARAVELI",
-    "distrito": [
+    "location": "CARAVELI",
+    "sublocation": [
       "ACARI",
       "ATICO",
       "ATIQUIPA",
@@ -519,8 +519,8 @@
     ]
   },
   {
-    "provincia": "CARHUAZ",
-    "distrito": [
+    "location": "CARHUAZ",
+    "sublocation": [
       "ACOPAMPA",
       "AMASHCA",
       "ANTA",
@@ -535,16 +535,16 @@
     ]
   },
   {
-    "provincia": "CARLOS FERMIN FITZCARRALD",
-    "distrito": [
+    "location": "CARLOS FERMIN FITZCARRALD",
+    "sublocation": [
       "SAN LUIS",
       "SAN NICOLAS",
       "YAUYA"
     ]
   },
   {
-    "provincia": "CASMA",
-    "distrito": [
+    "location": "CASMA",
+    "sublocation": [
       "BUENA VISTA ALTA",
       "CASMA",
       "COMANDANTE NOEL",
@@ -552,8 +552,8 @@
     ]
   },
   {
-    "provincia": "CASTILLA",
-    "distrito": [
+    "location": "CASTILLA",
+    "sublocation": [
       "ANDAGUA",
       "APLAO",
       "AYO",
@@ -571,8 +571,8 @@
     ]
   },
   {
-    "provincia": "CASTROVIRREYNA",
-    "distrito": [
+    "location": "CASTROVIRREYNA",
+    "sublocation": [
       "ARMA",
       "AURAHUA",
       "CAPILLAS",
@@ -589,8 +589,8 @@
     ]
   },
   {
-    "provincia": "CAYLLOMA",
-    "distrito": [
+    "location": "CAYLLOMA",
+    "sublocation": [
       "ACHOMA",
       "CABANACONDE",
       "CALLALLI",
@@ -614,8 +614,8 @@
     ]
   },
   {
-    "provincia": "CAÑETE",
-    "distrito": [
+    "location": "CAÑETE",
+    "sublocation": [
       "ASIA",
       "CALANGO",
       "CERRO AZUL",
@@ -635,8 +635,8 @@
     ]
   },
   {
-    "provincia": "CELENDIN",
-    "distrito": [
+    "location": "CELENDIN",
+    "sublocation": [
       "CELENDIN",
       "CHUMUCH",
       "CORTEGANA",
@@ -652,8 +652,8 @@
     ]
   },
   {
-    "provincia": "CHACHAPOYAS",
-    "distrito": [
+    "location": "CHACHAPOYAS",
+    "sublocation": [
       "ASUNCION",
       "BALSAS",
       "CHACHAPOYAS",
@@ -678,8 +678,8 @@
     ]
   },
   {
-    "provincia": "CHANCHAMAYO",
-    "distrito": [
+    "location": "CHANCHAMAYO",
+    "sublocation": [
       "CHANCHAMAYO",
       "PERENE",
       "PICHANAQUI",
@@ -689,16 +689,16 @@
     ]
   },
   {
-    "provincia": "CHEPEN",
-    "distrito": [
+    "location": "CHEPEN",
+    "sublocation": [
       "CHEPEN",
       "PACANGA",
       "PUEBLO NUEVO"
     ]
   },
   {
-    "provincia": "CHICLAYO",
-    "distrito": [
+    "location": "CHICLAYO",
+    "sublocation": [
       "CAYALTI",
       "CHICLAYO",
       "CHONGOYAPE",
@@ -722,8 +722,8 @@
     ]
   },
   {
-    "provincia": "CHINCHA",
-    "distrito": [
+    "location": "CHINCHA",
+    "sublocation": [
       "ALTO LARAN",
       "CHAVIN",
       "CHINCHA ALTA",
@@ -738,8 +738,8 @@
     ]
   },
   {
-    "provincia": "CHINCHEROS",
-    "distrito": [
+    "location": "CHINCHEROS",
+    "sublocation": [
       "AHUAYRO",
       "ANCO_HUALLO",
       "CHINCHEROS",
@@ -755,8 +755,8 @@
     ]
   },
   {
-    "provincia": "CHOTA",
-    "distrito": [
+    "location": "CHOTA",
+    "sublocation": [
       "ANGUIA",
       "CHADIN",
       "CHALAMARCA",
@@ -779,8 +779,8 @@
     ]
   },
   {
-    "provincia": "CHUCUITO",
-    "distrito": [
+    "location": "CHUCUITO",
+    "sublocation": [
       "DESAGUADERO",
       "HUACULLANI",
       "JULI",
@@ -791,8 +791,8 @@
     ]
   },
   {
-    "provincia": "CHUMBIVILCAS",
-    "distrito": [
+    "location": "CHUMBIVILCAS",
+    "sublocation": [
       "CAPACMARCA",
       "CHAMACA",
       "COLQUEMARCA",
@@ -804,8 +804,8 @@
     ]
   },
   {
-    "provincia": "CHUPACA",
-    "distrito": [
+    "location": "CHUPACA",
+    "sublocation": [
       "AHUAC",
       "CHONGOS BAJO",
       "CHUPACA",
@@ -818,8 +818,8 @@
     ]
   },
   {
-    "provincia": "CHURCAMPA",
-    "distrito": [
+    "location": "CHURCAMPA",
+    "sublocation": [
       "ANCO",
       "CHINCHIHUASI",
       "CHURCAMPA",
@@ -834,8 +834,8 @@
     ]
   },
   {
-    "provincia": "CONCEPCION",
-    "distrito": [
+    "location": "CONCEPCION",
+    "sublocation": [
       "ACO",
       "ANDAMARCA",
       "CHAMBARA",
@@ -854,8 +854,8 @@
     ]
   },
   {
-    "provincia": "CONDESUYOS",
-    "distrito": [
+    "location": "CONDESUYOS",
+    "sublocation": [
       "ANDARAY",
       "CAYARANI",
       "CHICHAS",
@@ -867,24 +867,24 @@
     ]
   },
   {
-    "provincia": "CONDORCANQUI",
-    "distrito": [
+    "location": "CONDORCANQUI",
+    "sublocation": [
       "EL CENEPA",
       "NIEVA",
       "RIO SANTIAGO"
     ]
   },
   {
-    "provincia": "CONTRALMIRANTE VILLAR",
-    "distrito": [
+    "location": "CONTRALMIRANTE VILLAR",
+    "sublocation": [
       "CANOAS DE PUNTA SAL",
       "CASITAS",
       "ZORRITOS"
     ]
   },
   {
-    "provincia": "CONTUMAZA",
-    "distrito": [
+    "location": "CONTUMAZA",
+    "sublocation": [
       "CHILETE",
       "CONTUMAZA",
       "CUPISNIQUE",
@@ -896,8 +896,8 @@
     ]
   },
   {
-    "provincia": "CORONEL PORTILLO",
-    "distrito": [
+    "location": "CORONEL PORTILLO",
+    "sublocation": [
       "CALLERIA",
       "CAMPOVERDE",
       "IPARIA",
@@ -908,8 +908,8 @@
     ]
   },
   {
-    "provincia": "CORONGO",
-    "distrito": [
+    "location": "CORONGO",
+    "sublocation": [
       "ACO",
       "BAMBAS",
       "CORONGO",
@@ -920,8 +920,8 @@
     ]
   },
   {
-    "provincia": "COTABAMBAS",
-    "distrito": [
+    "location": "COTABAMBAS",
+    "sublocation": [
       "CHALLHUAHUACHO",
       "COTABAMBAS",
       "COYLLURQUI",
@@ -931,8 +931,8 @@
     ]
   },
   {
-    "provincia": "CUSCO",
-    "distrito": [
+    "location": "CUSCO",
+    "sublocation": [
       "CCORCA",
       "CUSCO",
       "POROY",
@@ -944,8 +944,8 @@
     ]
   },
   {
-    "provincia": "CUTERVO",
-    "distrito": [
+    "location": "CUTERVO",
+    "sublocation": [
       "CALLAYUC",
       "CHOROS",
       "CUJILLO",
@@ -964,8 +964,8 @@
     ]
   },
   {
-    "provincia": "DANIEL ALCIDES CARRION",
-    "distrito": [
+    "location": "DANIEL ALCIDES CARRION",
+    "sublocation": [
       "CHACAYAN",
       "GOYLLARISQUIZGA",
       "PAUCAR",
@@ -977,8 +977,8 @@
     ]
   },
   {
-    "provincia": "DATEM DEL MARAÑON",
-    "distrito": [
+    "location": "DATEM DEL MARAÑON",
+    "sublocation": [
       "ANDOAS",
       "BARRANCA",
       "CAHUAPANAS",
@@ -988,8 +988,8 @@
     ]
   },
   {
-    "provincia": "DOS DE MAYO",
-    "distrito": [
+    "location": "DOS DE MAYO",
+    "sublocation": [
       "CHUQUIS",
       "LA UNION",
       "MARIAS",
@@ -1002,8 +1002,8 @@
     ]
   },
   {
-    "provincia": "EL COLLAO",
-    "distrito": [
+    "location": "EL COLLAO",
+    "sublocation": [
       "CAPAZO",
       "CONDURIRI",
       "ILAVE",
@@ -1012,8 +1012,8 @@
     ]
   },
   {
-    "provincia": "EL DORADO",
-    "distrito": [
+    "location": "EL DORADO",
+    "sublocation": [
       "AGUA BLANCA",
       "SAN JOSE DE SISA",
       "SAN MARTIN",
@@ -1022,8 +1022,8 @@
     ]
   },
   {
-    "provincia": "ESPINAR",
-    "distrito": [
+    "location": "ESPINAR",
+    "sublocation": [
       "ALTO PICHIGUA",
       "CONDOROMA",
       "COPORAQUE",
@@ -1035,8 +1035,8 @@
     ]
   },
   {
-    "provincia": "FERREÑAFE",
-    "distrito": [
+    "location": "FERREÑAFE",
+    "sublocation": [
       "CAÑARIS",
       "FERREÑAFE",
       "INCAHUASI",
@@ -1046,8 +1046,8 @@
     ]
   },
   {
-    "provincia": "GENERAL SANCHEZ CERRO",
-    "distrito": [
+    "location": "GENERAL SANCHEZ CERRO",
+    "sublocation": [
       "CHOJATA",
       "COALAQUE",
       "ICHUÑA",
@@ -1062,8 +1062,8 @@
     ]
   },
   {
-    "provincia": "GRAN CHIMU",
-    "distrito": [
+    "location": "GRAN CHIMU",
+    "sublocation": [
       "CASCAS",
       "LUCMA",
       "MARMOT",
@@ -1071,8 +1071,8 @@
     ]
   },
   {
-    "provincia": "GRAU",
-    "distrito": [
+    "location": "GRAU",
+    "sublocation": [
       "CHUQUIBAMBILLA",
       "CURASCO",
       "CURPAHUASI",
@@ -1090,8 +1090,8 @@
     ]
   },
   {
-    "provincia": "HUACAYBAMBA",
-    "distrito": [
+    "location": "HUACAYBAMBA",
+    "sublocation": [
       "CANCHABAMBA",
       "COCHABAMBA",
       "HUACAYBAMBA",
@@ -1099,16 +1099,16 @@
     ]
   },
   {
-    "provincia": "HUALGAYOC",
-    "distrito": [
+    "location": "HUALGAYOC",
+    "sublocation": [
       "BAMBAMARCA",
       "CHUGUR",
       "HUALGAYOC"
     ]
   },
   {
-    "provincia": "HUALLAGA",
-    "distrito": [
+    "location": "HUALLAGA",
+    "sublocation": [
       "ALTO SAPOSOA",
       "EL ESLABON",
       "PISCOYACU",
@@ -1118,8 +1118,8 @@
     ]
   },
   {
-    "provincia": "HUAMALIES",
-    "distrito": [
+    "location": "HUAMALIES",
+    "sublocation": [
       "ARANCAY",
       "CHAVIN DE PARIARCA",
       "JACAS GRANDE",
@@ -1134,8 +1134,8 @@
     ]
   },
   {
-    "provincia": "HUAMANGA",
-    "distrito": [
+    "location": "HUAMANGA",
+    "sublocation": [
       "ACOCRO",
       "ACOS VINCHOS",
       "ANDRES AVELINO CACERES DORREGARAY",
@@ -1155,8 +1155,8 @@
     ]
   },
   {
-    "provincia": "HUANCA SANCOS",
-    "distrito": [
+    "location": "HUANCA SANCOS",
+    "sublocation": [
       "CARAPO",
       "SACSAMARCA",
       "SANCOS",
@@ -1164,8 +1164,8 @@
     ]
   },
   {
-    "provincia": "HUANCABAMBA",
-    "distrito": [
+    "location": "HUANCABAMBA",
+    "sublocation": [
       "CANCHAQUE",
       "EL CARMEN DE LA FRONTERA",
       "HUANCABAMBA",
@@ -1177,8 +1177,8 @@
     ]
   },
   {
-    "provincia": "HUANCANE",
-    "distrito": [
+    "location": "HUANCANE",
+    "sublocation": [
       "COJATA",
       "HUANCANE",
       "HUATASANI",
@@ -1190,8 +1190,8 @@
     ]
   },
   {
-    "provincia": "HUANCAVELICA",
-    "distrito": [
+    "location": "HUANCAVELICA",
+    "sublocation": [
       "ACOBAMBILLA",
       "ACORIA",
       "ASCENSION",
@@ -1214,8 +1214,8 @@
     ]
   },
   {
-    "provincia": "HUANCAYO",
-    "distrito": [
+    "location": "HUANCAYO",
+    "sublocation": [
       "CARHUACALLANGA",
       "CHACAPAMPA",
       "CHICCHE",
@@ -1247,8 +1247,8 @@
     ]
   },
   {
-    "provincia": "HUANTA",
-    "distrito": [
+    "location": "HUANTA",
+    "sublocation": [
       "AYAHUANCO",
       "CANAYRE",
       "CHACA",
@@ -1265,8 +1265,8 @@
     ]
   },
   {
-    "provincia": "HUANUCO",
-    "distrito": [
+    "location": "HUANUCO",
+    "sublocation": [
       "AMARILIS",
       "CHINCHAO",
       "CHURUBAMBA",
@@ -1283,8 +1283,8 @@
     ]
   },
   {
-    "provincia": "HUARAL",
-    "distrito": [
+    "location": "HUARAL",
+    "sublocation": [
       "ATAVILLOS ALTO",
       "ATAVILLOS BAJO",
       "AUCALLAMA",
@@ -1300,8 +1300,8 @@
     ]
   },
   {
-    "provincia": "HUARAZ",
-    "distrito": [
+    "location": "HUARAZ",
+    "sublocation": [
       "COCHABAMBA",
       "COLCABAMBA",
       "HUANCHAY",
@@ -1317,8 +1317,8 @@
     ]
   },
   {
-    "provincia": "HUARI",
-    "distrito": [
+    "location": "HUARI",
+    "sublocation": [
       "ANRA",
       "CAJAY",
       "CHAVIN DE HUANTAR",
@@ -1338,8 +1338,8 @@
     ]
   },
   {
-    "provincia": "HUARMEY",
-    "distrito": [
+    "location": "HUARMEY",
+    "sublocation": [
       "COCHAPETI",
       "CULEBRAS",
       "HUARMEY",
@@ -1348,8 +1348,8 @@
     ]
   },
   {
-    "provincia": "HUAROCHIRI",
-    "distrito": [
+    "location": "HUAROCHIRI",
+    "sublocation": [
       "ANTIOQUIA",
       "CALLAHUANCA",
       "CARAMPOMA",
@@ -1385,8 +1385,8 @@
     ]
   },
   {
-    "provincia": "HUAURA",
-    "distrito": [
+    "location": "HUAURA",
+    "sublocation": [
       "AMBAR",
       "CALETA DE CARQUIN",
       "CHECRAS",
@@ -1402,8 +1402,8 @@
     ]
   },
   {
-    "provincia": "HUAYLAS",
-    "distrito": [
+    "location": "HUAYLAS",
+    "sublocation": [
       "CARAZ",
       "HUALLANCA",
       "HUATA",
@@ -1417,8 +1417,8 @@
     ]
   },
   {
-    "provincia": "HUAYTARA",
-    "distrito": [
+    "location": "HUAYTARA",
+    "sublocation": [
       "AYAVI",
       "CORDOVA",
       "HUAYACUNDO ARMA",
@@ -1438,8 +1438,8 @@
     ]
   },
   {
-    "provincia": "ICA",
-    "distrito": [
+    "location": "ICA",
+    "sublocation": [
       "ICA",
       "LA TINGUIÑA",
       "LOS AQUIJES",
@@ -1457,16 +1457,16 @@
     ]
   },
   {
-    "provincia": "ILO",
-    "distrito": [
+    "location": "ILO",
+    "sublocation": [
       "EL ALGARROBAL",
       "ILO",
       "PACOCHA"
     ]
   },
   {
-    "provincia": "ISLAY",
-    "distrito": [
+    "location": "ISLAY",
+    "sublocation": [
       "COCACHACRA",
       "DEAN VALDIVIA",
       "ISLAY",
@@ -1476,8 +1476,8 @@
     ]
   },
   {
-    "provincia": "JAEN",
-    "distrito": [
+    "location": "JAEN",
+    "sublocation": [
       "BELLAVISTA",
       "CHONTALI",
       "COLASAY",
@@ -1493,8 +1493,8 @@
     ]
   },
   {
-    "provincia": "JAUJA",
-    "distrito": [
+    "location": "JAUJA",
+    "sublocation": [
       "ACOLLA",
       "APATA",
       "ATAURA",
@@ -1532,16 +1532,16 @@
     ]
   },
   {
-    "provincia": "JORGE BASADRE",
-    "distrito": [
+    "location": "JORGE BASADRE",
+    "sublocation": [
       "ILABAYA",
       "ITE",
       "LOCUMBA"
     ]
   },
   {
-    "provincia": "JULCAN",
-    "distrito": [
+    "location": "JULCAN",
+    "sublocation": [
       "CALAMARCA",
       "CARABAMBA",
       "HUASO",
@@ -1549,8 +1549,8 @@
     ]
   },
   {
-    "provincia": "JUNIN",
-    "distrito": [
+    "location": "JUNIN",
+    "sublocation": [
       "CARHUAMAYO",
       "JUNIN",
       "ONDORES",
@@ -1558,8 +1558,8 @@
     ]
   },
   {
-    "provincia": "LA CONVENCION",
-    "distrito": [
+    "location": "LA CONVENCION",
+    "sublocation": [
       "CIELO PUNCO",
       "ECHARATE",
       "HUAYOPATA",
@@ -1581,8 +1581,8 @@
     ]
   },
   {
-    "provincia": "LA MAR",
-    "distrito": [
+    "location": "LA MAR",
+    "sublocation": [
       "ANCHIHUAY",
       "ANCO",
       "AYNA",
@@ -1601,8 +1601,8 @@
     ]
   },
   {
-    "provincia": "LA UNION",
-    "distrito": [
+    "location": "LA UNION",
+    "sublocation": [
       "ALCA",
       "CHARCANA",
       "COTAHUASI",
@@ -1617,8 +1617,8 @@
     ]
   },
   {
-    "provincia": "LAMAS",
-    "distrito": [
+    "location": "LAMAS",
+    "sublocation": [
       "ALONSO DE ALVARADO",
       "BARRANQUITA",
       "CAYNARACHI",
@@ -1633,8 +1633,8 @@
     ]
   },
   {
-    "provincia": "LAMBAYEQUE",
-    "distrito": [
+    "location": "LAMBAYEQUE",
+    "sublocation": [
       "CHOCHOPE",
       "ILLIMO",
       "JAYANCA",
@@ -1650,8 +1650,8 @@
     ]
   },
   {
-    "provincia": "LAMPA",
-    "distrito": [
+    "location": "LAMPA",
+    "sublocation": [
       "CABANILLA",
       "CALAPUJA",
       "LAMPA",
@@ -1665,8 +1665,8 @@
     ]
   },
   {
-    "provincia": "LAURICOCHA",
-    "distrito": [
+    "location": "LAURICOCHA",
+    "sublocation": [
       "BAÑOS",
       "JESUS",
       "JIVIA",
@@ -1677,8 +1677,8 @@
     ]
   },
   {
-    "provincia": "LEONCIO PRADO",
-    "distrito": [
+    "location": "LEONCIO PRADO",
+    "sublocation": [
       "CASTILLO GRANDE",
       "DANIEL ALOMIA ROBLES",
       "HERMILIO VALDIZAN",
@@ -1692,8 +1692,8 @@
     ]
   },
   {
-    "provincia": "LIMA",
-    "distrito": [
+    "location": "LIMA",
+    "sublocation": [
       "ANCON",
       "ATE",
       "BARRANCO",
@@ -1740,8 +1740,8 @@
     ]
   },
   {
-    "provincia": "LORETO",
-    "distrito": [
+    "location": "LORETO",
+    "sublocation": [
       "NAUTA",
       "PARINARI",
       "TIGRE",
@@ -1750,8 +1750,8 @@
     ]
   },
   {
-    "provincia": "LUCANAS",
-    "distrito": [
+    "location": "LUCANAS",
+    "sublocation": [
       "AUCARA",
       "CABANA",
       "CARMEN SALCEDO",
@@ -1776,8 +1776,8 @@
     ]
   },
   {
-    "provincia": "LUYA",
-    "distrito": [
+    "location": "LUYA",
+    "sublocation": [
       "CAMPORREDONDO",
       "COCABAMBA",
       "COLCAMAR",
@@ -1804,8 +1804,8 @@
     ]
   },
   {
-    "provincia": "MANU",
-    "distrito": [
+    "location": "MANU",
+    "sublocation": [
       "FITZCARRALD",
       "HUEPETUHE",
       "MADRE DE DIOS",
@@ -1813,8 +1813,8 @@
     ]
   },
   {
-    "provincia": "MARAÑON",
-    "distrito": [
+    "location": "MARAÑON",
+    "sublocation": [
       "CHOLON",
       "HUACRACHUCO",
       "LA MORADA",
@@ -1823,8 +1823,8 @@
     ]
   },
   {
-    "provincia": "MARISCAL CACERES",
-    "distrito": [
+    "location": "MARISCAL CACERES",
+    "sublocation": [
       "CAMPANILLA",
       "HUICUNGO",
       "JUANJUI",
@@ -1833,8 +1833,8 @@
     ]
   },
   {
-    "provincia": "MARISCAL LUZURIAGA",
-    "distrito": [
+    "location": "MARISCAL LUZURIAGA",
+    "sublocation": [
       "CASCA",
       "ELEAZAR GUZMAN BARRON",
       "FIDEL OLIVAS ESCUDERO",
@@ -1846,8 +1846,8 @@
     ]
   },
   {
-    "provincia": "MARISCAL NIETO",
-    "distrito": [
+    "location": "MARISCAL NIETO",
+    "sublocation": [
       "CARUMAS",
       "CUCHUMBAYA",
       "MOQUEGUA",
@@ -1858,8 +1858,8 @@
     ]
   },
   {
-    "provincia": "MARISCAL RAMON CASTILLA",
-    "distrito": [
+    "location": "MARISCAL RAMON CASTILLA",
+    "sublocation": [
       "PEBAS",
       "RAMON CASTILLA",
       "SAN PABLO",
@@ -1867,8 +1867,8 @@
     ]
   },
   {
-    "provincia": "MAYNAS",
-    "distrito": [
+    "location": "MAYNAS",
+    "sublocation": [
       "ALTO NANAY",
       "BELEN",
       "FERNANDO LORES",
@@ -1883,8 +1883,8 @@
     ]
   },
   {
-    "provincia": "MELGAR",
-    "distrito": [
+    "location": "MELGAR",
+    "sublocation": [
       "ANTAUTA",
       "AYAVIRI",
       "CUPI",
@@ -1897,8 +1897,8 @@
     ]
   },
   {
-    "provincia": "MOHO",
-    "distrito": [
+    "location": "MOHO",
+    "sublocation": [
       "CONIMA",
       "HUAYRAPATA",
       "MOHO",
@@ -1906,8 +1906,8 @@
     ]
   },
   {
-    "provincia": "MORROPON",
-    "distrito": [
+    "location": "MORROPON",
+    "sublocation": [
       "BUENOS AIRES",
       "CHALACO",
       "CHULUCANAS",
@@ -1921,8 +1921,8 @@
     ]
   },
   {
-    "provincia": "MOYOBAMBA",
-    "distrito": [
+    "location": "MOYOBAMBA",
+    "sublocation": [
       "CALZADA",
       "HABANA",
       "JEPELACIO",
@@ -1932,8 +1932,8 @@
     ]
   },
   {
-    "provincia": "NASCA",
-    "distrito": [
+    "location": "NASCA",
+    "sublocation": [
       "CHANGUILLO",
       "EL INGENIO",
       "MARCONA",
@@ -1942,8 +1942,8 @@
     ]
   },
   {
-    "provincia": "OCROS",
-    "distrito": [
+    "location": "OCROS",
+    "sublocation": [
       "ACAS",
       "CAJAMARQUILLA",
       "CARHUAPAMPA",
@@ -1957,8 +1957,8 @@
     ]
   },
   {
-    "provincia": "OTUZCO",
-    "distrito": [
+    "location": "OTUZCO",
+    "sublocation": [
       "AGALLPAMPA",
       "CHARAT",
       "HUARANCHAL",
@@ -1972,8 +1972,8 @@
     ]
   },
   {
-    "provincia": "OXAPAMPA",
-    "distrito": [
+    "location": "OXAPAMPA",
+    "sublocation": [
       "CONSTITUCION",
       "PUERTO BERMUDEZ",
       "PALCAZU",
@@ -1985,8 +1985,8 @@
     ]
   },
   {
-    "provincia": "OYON",
-    "distrito": [
+    "location": "OYON",
+    "sublocation": [
       "ANDAJES",
       "CAUJUL",
       "COCHAMARCA",
@@ -1996,8 +1996,8 @@
     ]
   },
   {
-    "provincia": "PACASMAYO",
-    "distrito": [
+    "location": "PACASMAYO",
+    "sublocation": [
       "GUADALUPE",
       "JEQUETEPEQUE",
       "PACASMAYO",
@@ -2006,8 +2006,8 @@
     ]
   },
   {
-    "provincia": "PACHITEA",
-    "distrito": [
+    "location": "PACHITEA",
+    "sublocation": [
       "CHAGLLA",
       "MOLINO",
       "PANAO",
@@ -2015,8 +2015,8 @@
     ]
   },
   {
-    "provincia": "PADRE ABAD",
-    "distrito": [
+    "location": "PADRE ABAD",
+    "sublocation": [
       "ALEXANDER VON HUMBOLDT",
       "BOQUERON",
       "CURIMANA",
@@ -2027,8 +2027,8 @@
     ]
   },
   {
-    "provincia": "PAITA",
-    "distrito": [
+    "location": "PAITA",
+    "sublocation": [
       "AMOTAPE",
       "ARENAL",
       "COLAN",
@@ -2039,8 +2039,8 @@
     ]
   },
   {
-    "provincia": "PALLASCA",
-    "distrito": [
+    "location": "PALLASCA",
+    "sublocation": [
       "BOLOGNESI",
       "CABANA",
       "CONCHUCOS",
@@ -2055,8 +2055,8 @@
     ]
   },
   {
-    "provincia": "PALPA",
-    "distrito": [
+    "location": "PALPA",
+    "sublocation": [
       "LLIPATA",
       "PALPA",
       "RIO GRANDE",
@@ -2065,8 +2065,8 @@
     ]
   },
   {
-    "provincia": "PARINACOCHAS",
-    "distrito": [
+    "location": "PARINACOCHAS",
+    "sublocation": [
       "CHUMPI",
       "CORACORA",
       "CORONEL CASTAÑEDA",
@@ -2078,8 +2078,8 @@
     ]
   },
   {
-    "provincia": "PARURO",
-    "distrito": [
+    "location": "PARURO",
+    "sublocation": [
       "ACCHA",
       "CCAPI",
       "COLCHA",
@@ -2092,8 +2092,8 @@
     ]
   },
   {
-    "provincia": "PASCO",
-    "distrito": [
+    "location": "PASCO",
+    "sublocation": [
       "CHAUPIMARCA",
       "HUACHON",
       "HUARIACA",
@@ -2110,8 +2110,8 @@
     ]
   },
   {
-    "provincia": "PATAZ",
-    "distrito": [
+    "location": "PATAZ",
+    "sublocation": [
       "BULDIBUYO",
       "CHILLIA",
       "HUANCASPATA",
@@ -2128,8 +2128,8 @@
     ]
   },
   {
-    "provincia": "PAUCAR DEL SARA SARA",
-    "distrito": [
+    "location": "PAUCAR DEL SARA SARA",
+    "sublocation": [
       "COLTA",
       "CORCULLA",
       "LAMPA",
@@ -2143,8 +2143,8 @@
     ]
   },
   {
-    "provincia": "PAUCARTAMBO",
-    "distrito": [
+    "location": "PAUCARTAMBO",
+    "sublocation": [
       "CAICAY",
       "CHALLABAMBA",
       "COLQUEPATA",
@@ -2154,8 +2154,8 @@
     ]
   },
   {
-    "provincia": "PICOTA",
-    "distrito": [
+    "location": "PICOTA",
+    "sublocation": [
       "BUENOS AIRES",
       "CASPISAPA",
       "PICOTA",
@@ -2169,8 +2169,8 @@
     ]
   },
   {
-    "provincia": "PISCO",
-    "distrito": [
+    "location": "PISCO",
+    "sublocation": [
       "HUANCANO",
       "HUMAY",
       "INDEPENDENCIA",
@@ -2182,8 +2182,8 @@
     ]
   },
   {
-    "provincia": "PIURA",
-    "distrito": [
+    "location": "PIURA",
+    "sublocation": [
       "CASTILLA",
       "CATACAOS",
       "CURA MORI",
@@ -2197,8 +2197,8 @@
     ]
   },
   {
-    "provincia": "POMABAMBA",
-    "distrito": [
+    "location": "POMABAMBA",
+    "sublocation": [
       "HUAYLLAN",
       "PAROBAMBA",
       "POMABAMBA",
@@ -2206,8 +2206,8 @@
     ]
   },
   {
-    "provincia": "PUERTO INCA",
-    "distrito": [
+    "location": "PUERTO INCA",
+    "sublocation": [
       "CODO DEL POZUZO",
       "HONORIA",
       "PUERTO INCA",
@@ -2216,8 +2216,8 @@
     ]
   },
   {
-    "provincia": "PUNO",
-    "distrito": [
+    "location": "PUNO",
+    "sublocation": [
       "ACORA",
       "AMANTANI",
       "ATUNCOLLA",
@@ -2236,14 +2236,14 @@
     ]
   },
   {
-    "provincia": "PURUS",
-    "distrito": [
+    "location": "PURUS",
+    "sublocation": [
       "PURUS"
     ]
   },
   {
-    "provincia": "PUTUMAYO",
-    "distrito": [
+    "location": "PUTUMAYO",
+    "sublocation": [
       "PUTUMAYO",
       "ROSA PANDURO",
       "TENIENTE MANUEL CLAVERO",
@@ -2251,8 +2251,8 @@
     ]
   },
   {
-    "provincia": "QUISPICANCHI",
-    "distrito": [
+    "location": "QUISPICANCHI",
+    "sublocation": [
       "ANDAHUAYLILLAS",
       "CAMANTI",
       "CCARHUAYO",
@@ -2268,8 +2268,8 @@
     ]
   },
   {
-    "provincia": "RECUAY",
-    "distrito": [
+    "location": "RECUAY",
+    "sublocation": [
       "CATAC",
       "COTAPARACO",
       "HUAYLLAPAMPA",
@@ -2283,8 +2283,8 @@
     ]
   },
   {
-    "provincia": "REQUENA",
-    "distrito": [
+    "location": "REQUENA",
+    "sublocation": [
       "ALTO TAPICHE",
       "CAPELO",
       "EMILIO SAN MARTIN",
@@ -2299,8 +2299,8 @@
     ]
   },
   {
-    "provincia": "RIOJA",
-    "distrito": [
+    "location": "RIOJA",
+    "sublocation": [
       "AWAJUN",
       "ELIAS SOPLIN VARGAS",
       "NUEVA CAJAMARCA",
@@ -2313,8 +2313,8 @@
     ]
   },
   {
-    "provincia": "RODRIGUEZ DE MENDOZA",
-    "distrito": [
+    "location": "RODRIGUEZ DE MENDOZA",
+    "sublocation": [
       "CHIRIMOTO",
       "COCHAMAL",
       "HUAMBO",
@@ -2330,8 +2330,8 @@
     ]
   },
   {
-    "provincia": "SAN ANTONIO DE PUTINA",
-    "distrito": [
+    "location": "SAN ANTONIO DE PUTINA",
+    "sublocation": [
       "ANANEA",
       "PEDRO VILCA APAZA",
       "PUTINA",
@@ -2340,8 +2340,8 @@
     ]
   },
   {
-    "provincia": "SAN IGNACIO",
-    "distrito": [
+    "location": "SAN IGNACIO",
+    "sublocation": [
       "CHIRINOS",
       "HUARANGO",
       "LA COIPA",
@@ -2352,8 +2352,8 @@
     ]
   },
   {
-    "provincia": "SAN MARCOS",
-    "distrito": [
+    "location": "SAN MARCOS",
+    "sublocation": [
       "CHANCAY",
       "EDUARDO VILLANUEVA",
       "GREGORIO PITA",
@@ -2364,8 +2364,8 @@
     ]
   },
   {
-    "provincia": "SAN MARTIN",
-    "distrito": [
+    "location": "SAN MARTIN",
+    "sublocation": [
       "ALBERTO LEVEAU",
       "CACATACHI",
       "CHAZUTA",
@@ -2383,8 +2383,8 @@
     ]
   },
   {
-    "provincia": "SAN MIGUEL",
-    "distrito": [
+    "location": "SAN MIGUEL",
+    "sublocation": [
       "BOLIVAR",
       "CALQUIS",
       "CATILLUC",
@@ -2401,8 +2401,8 @@
     ]
   },
   {
-    "provincia": "SAN PABLO",
-    "distrito": [
+    "location": "SAN PABLO",
+    "sublocation": [
       "SAN BERNARDINO",
       "SAN LUIS",
       "SAN PABLO",
@@ -2410,8 +2410,8 @@
     ]
   },
   {
-    "provincia": "SAN ROMAN",
-    "distrito": [
+    "location": "SAN ROMAN",
+    "sublocation": [
       "CABANA",
       "CABANILLAS",
       "CARACOTO",
@@ -2420,8 +2420,8 @@
     ]
   },
   {
-    "provincia": "SANCHEZ CARRION",
-    "distrito": [
+    "location": "SANCHEZ CARRION",
+    "sublocation": [
       "CHUGAY",
       "COCHORCO",
       "CURGOS",
@@ -2433,8 +2433,8 @@
     ]
   },
   {
-    "provincia": "SANDIA",
-    "distrito": [
+    "location": "SANDIA",
+    "sublocation": [
       "ALTO INAMBARI",
       "CUYOCUYO",
       "LIMBANI",
@@ -2448,8 +2448,8 @@
     ]
   },
   {
-    "provincia": "SANTA",
-    "distrito": [
+    "location": "SANTA",
+    "sublocation": [
       "CACERES DEL PERU",
       "CHIMBOTE",
       "COISHCO",
@@ -2462,8 +2462,8 @@
     ]
   },
   {
-    "provincia": "SANTA CRUZ",
-    "distrito": [
+    "location": "SANTA CRUZ",
+    "sublocation": [
       "ANDABAMBA",
       "CATACHE",
       "CHANCAYBAÑOS",
@@ -2478,8 +2478,8 @@
     ]
   },
   {
-    "provincia": "SANTIAGO DE CHUCO",
-    "distrito": [
+    "location": "SANTIAGO DE CHUCO",
+    "sublocation": [
       "ANGASMARCA",
       "CACHICADAN",
       "MOLLEBAMBA",
@@ -2491,8 +2491,8 @@
     ]
   },
   {
-    "provincia": "SATIPO",
-    "distrito": [
+    "location": "SATIPO",
+    "sublocation": [
       "COVIRIALI",
       "LLAYLLA",
       "MAZAMARI",
@@ -2505,8 +2505,8 @@
     ]
   },
   {
-    "provincia": "SECHURA",
-    "distrito": [
+    "location": "SECHURA",
+    "sublocation": [
       "BELLAVISTA DE LA UNION",
       "BERNAL",
       "CRISTO NOS VALGA",
@@ -2516,8 +2516,8 @@
     ]
   },
   {
-    "provincia": "SIHUAS",
-    "distrito": [
+    "location": "SIHUAS",
+    "sublocation": [
       "ACOBAMBA",
       "ALFONSO UGARTE",
       "CASHAPAMPA",
@@ -2531,8 +2531,8 @@
     ]
   },
   {
-    "provincia": "SUCRE",
-    "distrito": [
+    "location": "SUCRE",
+    "sublocation": [
       "BELEN",
       "CHALCOS",
       "CHILCAYOC",
@@ -2547,8 +2547,8 @@
     ]
   },
   {
-    "provincia": "SULLANA",
-    "distrito": [
+    "location": "SULLANA",
+    "sublocation": [
       "BELLAVISTA",
       "IGNACIO ESCUDERO",
       "LANCONES",
@@ -2560,8 +2560,8 @@
     ]
   },
   {
-    "provincia": "TACNA",
-    "distrito": [
+    "location": "TACNA",
+    "sublocation": [
       "ALTO DE LA ALIANZA",
       "CALANA",
       "CIUDAD NUEVA",
@@ -2576,16 +2576,16 @@
     ]
   },
   {
-    "provincia": "TAHUAMANU",
-    "distrito": [
+    "location": "TAHUAMANU",
+    "sublocation": [
       "IBERIA",
       "IÑAPARI",
       "TAHUAMANU"
     ]
   },
   {
-    "provincia": "TALARA",
-    "distrito": [
+    "location": "TALARA",
+    "sublocation": [
       "EL ALTO",
       "LA BREA",
       "LOBITOS",
@@ -2595,8 +2595,8 @@
     ]
   },
   {
-    "provincia": "TAMBOPATA",
-    "distrito": [
+    "location": "TAMBOPATA",
+    "sublocation": [
       "INAMBARI",
       "LABERINTO",
       "LAS PIEDRAS",
@@ -2604,8 +2604,8 @@
     ]
   },
   {
-    "provincia": "TARATA",
-    "distrito": [
+    "location": "TARATA",
+    "sublocation": [
       "ESTIQUE",
       "ESTIQUE-PAMPA",
       "HEROES ALBARRACIN",
@@ -2617,8 +2617,8 @@
     ]
   },
   {
-    "provincia": "TARMA",
-    "distrito": [
+    "location": "TARMA",
+    "sublocation": [
       "ACOBAMBA",
       "HUARICOLCA",
       "HUASAHUASI",
@@ -2631,8 +2631,8 @@
     ]
   },
   {
-    "provincia": "TAYACAJA",
-    "distrito": [
+    "location": "TAYACAJA",
+    "sublocation": [
       "ACOSTAMBO",
       "ACRAQUIA",
       "AHUAYCHA",
@@ -2659,8 +2659,8 @@
     ]
   },
   {
-    "provincia": "TOCACHE",
-    "distrito": [
+    "location": "TOCACHE",
+    "sublocation": [
       "NUEVO PROGRESO",
       "POLVORA",
       "SANTA LUCIA",
@@ -2670,8 +2670,8 @@
     ]
   },
   {
-    "provincia": "TRUJILLO",
-    "distrito": [
+    "location": "TRUJILLO",
+    "sublocation": [
       "EL PORVENIR",
       "FLORENCIA DE MORA",
       "HUANCHACO",
@@ -2686,8 +2686,8 @@
     ]
   },
   {
-    "provincia": "TUMBES",
-    "distrito": [
+    "location": "TUMBES",
+    "sublocation": [
       "CORRALES",
       "LA CRUZ",
       "PAMPAS DE HOSPITAL",
@@ -2697,8 +2697,8 @@
     ]
   },
   {
-    "provincia": "UCAYALI",
-    "distrito": [
+    "location": "UCAYALI",
+    "sublocation": [
       "CONTAMANA",
       "INAHUAYA",
       "PADRE MARQUEZ",
@@ -2708,8 +2708,8 @@
     ]
   },
   {
-    "provincia": "URUBAMBA",
-    "distrito": [
+    "location": "URUBAMBA",
+    "sublocation": [
       "CHINCHERO",
       "HUAYLLABAMBA",
       "MACHUPICCHU",
@@ -2720,8 +2720,8 @@
     ]
   },
   {
-    "provincia": "UTCUBAMBA",
-    "distrito": [
+    "location": "UTCUBAMBA",
+    "sublocation": [
       "BAGUA GRANDE",
       "CAJARURO",
       "CUMBA",
@@ -2732,8 +2732,8 @@
     ]
   },
   {
-    "provincia": "VICTOR FAJARDO",
-    "distrito": [
+    "location": "VICTOR FAJARDO",
+    "sublocation": [
       "ALCAMENCA",
       "APONGO",
       "ASQUIPATA",
@@ -2749,8 +2749,8 @@
     ]
   },
   {
-    "provincia": "VILCAS HUAMAN",
-    "distrito": [
+    "location": "VILCAS HUAMAN",
+    "sublocation": [
       "ACCOMARCA",
       "CARHUANCA",
       "CONCEPCION",
@@ -2762,16 +2762,16 @@
     ]
   },
   {
-    "provincia": "VIRU",
-    "distrito": [
+    "location": "VIRU",
+    "sublocation": [
       "CHAO",
       "GUADALUPITO",
       "VIRU"
     ]
   },
   {
-    "provincia": "YAROWILCA",
-    "distrito": [
+    "location": "YAROWILCA",
+    "sublocation": [
       "APARICIO POMARES",
       "CAHUAC",
       "CHACABAMBA",
@@ -2783,8 +2783,8 @@
     ]
   },
   {
-    "provincia": "YAULI",
-    "distrito": [
+    "location": "YAULI",
+    "sublocation": [
       "CHACAPALPA",
       "HUAY-HUAY",
       "LA OROYA",
@@ -2798,8 +2798,8 @@
     ]
   },
   {
-    "provincia": "YAUYOS",
-    "distrito": [
+    "location": "YAUYOS",
+    "sublocation": [
       "ALIS",
       "ALLAUCA",
       "AYAVIRI",
@@ -2836,8 +2836,8 @@
     ]
   },
   {
-    "provincia": "YUNGAY",
-    "distrito": [
+    "location": "YUNGAY",
+    "sublocation": [
       "CASCAPARA",
       "MANCOS",
       "MATACOTO",
@@ -2849,8 +2849,8 @@
     ]
   },
   {
-    "provincia": "YUNGUYO",
-    "distrito": [
+    "location": "YUNGUYO",
+    "sublocation": [
       "ANAPIA",
       "COPANI",
       "CUTURAPI",
@@ -2861,8 +2861,8 @@
     ]
   },
   {
-    "provincia": "ZARUMILLA",
-    "distrito": [
+    "location": "ZARUMILLA",
+    "sublocation": [
       "AGUAS VERDES",
       "MATAPALO",
       "PAPAYAL",

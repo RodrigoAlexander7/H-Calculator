@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, Picker, PickerValue, Text, View } from 'react-native-ui-lib';
+import department_province from '../../../utils/department_province.json';
 import departments from '../../../utils/departments.json';
 
 type Location = string
@@ -24,6 +25,17 @@ const getItem = (tuple: TupleJson, location:Location) => {
 export default function DiagnosticScreen() {
    const [department,setDepartment] = useState<Location>('')
    const [province,setProvince] = useState<Location>('')
+
+   const provinceList = 
+   department_province.find((d) => d.department === department)?.province || []
+   const provinceItems = 
+   provinceList.map((prov)=>(
+      {
+         label: prov,
+         value: prov
+      }
+   ))
+
 
    const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
       if(typeof value !== 'string'){
