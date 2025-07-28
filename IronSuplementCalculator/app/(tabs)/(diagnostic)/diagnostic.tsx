@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Text, View } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { PaperProvider, TextInput } from 'react-native-paper';
 import { Button, Picker, PickerValue } from 'react-native-ui-lib';
 import department_province from '../../../utils/department_province.json';
 import departments from '../../../utils/departments.json';
@@ -73,84 +73,86 @@ export default function DiagnosticScreen() {
 
    
    return(
-      <View >
-         <View>
-            <TextInput
-               label='Edad'
-               onChangeText={setAge}
-               value= {age}
-               keyboardType='numeric'
-               style={
-                  {backgroundColor: 'white'}
-               }
-            />
-
-            <TextInput
-               label='HB Observada'
-               onChangeText={setHb}
-               value= {hb}
-               keyboardType='numeric'
-               style={
-                  {backgroundColor: 'white'}
-               }
-            />
-
-         </View>
-
+      <PaperProvider>
          <View >
-            <Picker
-               showSearch
-               preset='outline'
-               label='Selecciona Departamento'
-               labelColor= 'black'
-               placeholder='Departamento'
-               items = {departments}
-               value={department}
-               onChange={onLocationChange('department')}
-            />
-            <Picker
-               preset='outline'
-               label='Selecciona Provincia'
-               labelColor= 'black'
-               placeholder='Provincia'
-               editable={department !== ''}
-               showSearch
-               searchStyle={{color:'black'}}
-               items = {provinceItems}
-               value={province}
-               onChange={onLocationChange('province')}
-            />
-            <Picker
-               preset='outline'
-               label='Selecciona Distrito'
-               labelColor= 'black'
-               placeholder='Distrito'
-               editable={province !== ''}
-               showSearch
-               searchStyle={{color:'black'}}
-               items = {districtItems}
-               value={district}
-               onChange={onLocationChange('district')}
-            />
-            <Picker
-               preset='outline'
-               label='Selecciona Centro Poblado'
-               labelColor= 'black'
-               placeholder='Centro Poblado'
-               editable={district !== ''}
-               showSearch
-               searchStyle={{color:'black'}}
-               items = {townItems}
-               value={town}
-               onChange={onLocationChange('town')}
-            />
+            <View>
+               <TextInput
+                  label='Edad'
+                  onChangeText={setAge}
+                  value= {age}
+                  keyboardType='numeric'
+                  style={
+                     {backgroundColor: 'white'}
+                  }
+               />
 
-            <Text>Calcular diagnostico</Text>   
-            <Button
-               label='Calcular'   
-               onPress = {()=>console.log(adjustHB)}
-            />
-         </View>   
-      </View>
+               <TextInput
+                  label='HB Observada'
+                  onChangeText={setHb}
+                  value= {hb}
+                  keyboardType='numeric'
+                  style={
+                     {backgroundColor: 'white'}
+                  }
+               />
+
+            </View>
+
+            <View >
+               <Picker
+                  showSearch
+                  preset='outline'
+                  label='Selecciona Departamento'
+                  labelColor= 'black'
+                  placeholder='Departamento'
+                  items = {departments}
+                  value={department}
+                  onChange={onLocationChange('department')}
+               />
+               <Picker
+                  preset='outline'
+                  label='Selecciona Provincia'
+                  labelColor= 'black'
+                  placeholder='Provincia'
+                  editable={department !== ''}
+                  showSearch
+                  searchStyle={{color:'black'}}
+                  items = {provinceItems}
+                  value={province}
+                  onChange={onLocationChange('province')}
+               />
+               <Picker
+                  preset='outline'
+                  label='Selecciona Distrito'
+                  labelColor= 'black'
+                  placeholder='Distrito'
+                  editable={province !== ''}
+                  showSearch
+                  searchStyle={{color:'black'}}
+                  items = {districtItems}
+                  value={district}
+                  onChange={onLocationChange('district')}
+               />
+               <Picker
+                  preset='outline'
+                  label='Selecciona Centro Poblado'
+                  labelColor= 'black'
+                  placeholder='Centro Poblado'
+                  editable={district !== ''}
+                  showSearch
+                  searchStyle={{color:'black'}}
+                  items = {townItems}
+                  value={town}
+                  onChange={onLocationChange('town')}
+               />
+
+               <Text>Calcular diagnostico</Text>   
+               <Button
+                  label='Calcular'   
+                  onPress = {()=>console.log(adjustHB)}
+               />
+            </View>   
+         </View>
+      </PaperProvider>
    )
 }
