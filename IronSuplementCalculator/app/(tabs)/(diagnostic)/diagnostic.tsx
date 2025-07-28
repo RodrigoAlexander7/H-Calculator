@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Button, Picker, PickerValue, Text, View } from 'react-native-ui-lib';
+import { Text, View } from 'react-native';
+import { TextInput } from 'react-native-paper';
+import { Button, Picker, PickerValue } from 'react-native-ui-lib';
 import department_province from '../../../utils/department_province.json';
 import departments from '../../../utils/departments.json';
 import district_town from '../../../utils/district_town.json';
@@ -36,11 +38,14 @@ export default function DiagnosticScreen() {
    const [district,setDistrict] = useState<Location>('')
    const [town,setTown] = useState<Location>('')
    const [adjustHB,setAdjustHB] = useState<Location>('')
+   
+   const [age,setAge] = useState<string>('')
+   const [hb,setHb] = useState<string>('')
 
    const provinceItems = getItem(department_province, department)
    const districtItems = getItem(province_district, province)
    const townItems = getItem(district_town, district)
-
+   
 
    const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
       if(typeof value !== 'string'){
@@ -66,9 +71,33 @@ export default function DiagnosticScreen() {
       }
    }
 
+   
    return(
-      <View useSafeArea>
-         <View centerH>
+      <View >
+         <View>
+            <TextInput
+               label='Edad'
+               onChangeText={setAge}
+               value= {age}
+               keyboardType='numeric'
+               style={
+                  {backgroundColor: 'white'}
+               }
+            />
+
+            <TextInput
+               label='HB Observada'
+               onChangeText={setHb}
+               value= {hb}
+               keyboardType='numeric'
+               style={
+                  {backgroundColor: 'white'}
+               }
+            />
+
+         </View>
+
+         <View >
             <Picker
                showSearch
                preset='outline'
