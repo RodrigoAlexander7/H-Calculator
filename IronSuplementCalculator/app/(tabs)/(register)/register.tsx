@@ -1,4 +1,5 @@
 import DateTimePicker from '@react-native-community/datetimepicker';
+
 import dayjs from 'dayjs';
 import { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
@@ -8,6 +9,7 @@ export default function RegisterScreen(){
    const [name, setName] = useState('')
    const [lastname, setLastname] = useState('')
    const [date, setDate] = useState(dayjs())
+   console.log(date)
    const [showPicker, setShowPicker] = useState(false)
 
 
@@ -33,8 +35,7 @@ export default function RegisterScreen(){
                   label='Fecha de Nacimiento'
                   editable={false}
                   style={{backgroundColor:'white'}}
-                  value = {dayjs(date,'DD-MM-YYYY').toString()}
-               
+                  value = {dayjs(date).format('DD-MMMM-YYYY')}
                />
             </TouchableOpacity>
 
