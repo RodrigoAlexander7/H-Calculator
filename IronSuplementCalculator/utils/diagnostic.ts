@@ -1,8 +1,9 @@
+import dayjs from 'dayjs';
 
-const calculateDiagnostic = (ageStr, hbStr, hbCorrectionStr) => {
-   age = Number(ageStr)
-   hb = Number(hbStr)
-   hbCorrection = Number(hbCorrectionStr)
+const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boolean,isPuerper:boolean,gestationTime:string, hbStr:string, hbCorrectionStr:string) => {
+   const age: number = Number(dayjs().diff(dayjs(dateBirthStr),'day'))
+   const hbCorrection:number = Number(hbCorrectionStr)
+   let hb:number = Number(hbStr)
 
    hb = hb - hbCorrection
    

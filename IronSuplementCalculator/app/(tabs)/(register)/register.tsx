@@ -8,8 +8,8 @@ import { Button, PaperProvider, RadioButton, TextInput } from 'react-native-pape
 export default function RegisterScreen(){
    const [name, setName] = useState('')
    const [lastname, setLastname] = useState('')
-   const [date, setDate] = useState(dayjs())
-   const [showPicker, setShowPicker] = useState(false)
+   const [date, setDate] = useState<dayjs.Dayjs>(dayjs())
+   const [showPicker, setShowPicker] = useState<boolean>(false)
    const [gender, setGender] = useState<string>('')
    const [fameleAditional, SetFameleAditional] = useState<string>('none')
    const [gestationTime, SetGestationTime] = useState<string>('none')
@@ -73,9 +73,9 @@ export default function RegisterScreen(){
                   <View>
                      <Text>Tiempo de Gestacion</Text>                  
                      <RadioButton.Group onValueChange={SetGestationTime} value = {gestationTime}>
-                        <RadioButton.Item label='1er Trimestre' value='1T'/>
-                        <RadioButton.Item label='2do Trimestre' value='2T'/>
-                        <RadioButton.Item label='3er Trimestre' value='3T'/>
+                        <RadioButton.Item label='1er Trimestre' value='1'/>
+                        <RadioButton.Item label='2do Trimestre' value='2'/>
+                        <RadioButton.Item label='3er Trimestre' value='3'/>
                      </RadioButton.Group> 
                   </View>
                )}

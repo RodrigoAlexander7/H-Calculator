@@ -39,7 +39,6 @@ export default function DiagnosticScreen() {
    const [town,setTown] = useState<Location>('')
    const [adjustHB,setAdjustHB] = useState<Location>('')
    
-   const [age,setAge] = useState<string>('')
    const [hb,setHb] = useState<string>('')
 
    const provinceItems = getItem(department_province, department)
@@ -76,15 +75,6 @@ export default function DiagnosticScreen() {
       <PaperProvider>
          <View >
             <View>
-               <TextInput
-                  label='Edad'
-                  onChangeText={setAge}
-                  value= {age}
-                  keyboardType='numeric'
-                  style={
-                     {backgroundColor: 'white'}
-                  }
-               />
 
                <TextInput
                   label='HB Observada'
