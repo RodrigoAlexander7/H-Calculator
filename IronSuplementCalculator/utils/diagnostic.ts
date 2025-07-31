@@ -4,8 +4,27 @@ const WEEK : number = 7
 const MONTH : number = 30
 const YEAR : number = 365
 
+interface stats{
+   anemiaLimit: number;
+   result: string;
+}
 
-const genericRules = [
+interface GenericRules {
+   ageMax:number;
+   stats: stats[]
+}
+
+interface FamaleRules{
+   ageMax?:number;
+   isGestant: boolean;
+   isPuerper:boolean;
+   stats:stats[];
+   gestationTime?:number;
+}
+
+
+
+const genericRules:GenericRules[] = [
    {ageMax : WEEK, stats:[{anemiaLimit:13, result:'Caso de Anemia' }]} ,
    {ageMax : 4*WEEK, stats:[{anemiaLimit:10, result:'Caso de Anemia'}]},
    {ageMax : 8 * WEEK, stats:[{anemiaLimit:8, result:'Caso de Anemia'}]},
@@ -28,7 +47,7 @@ const genericRules = [
    ]}, 
 ]
 
-const maleRules = [
+const maleRules:GenericRules[] = [
    // man 12 - 14
    {ageMax : 15 * YEAR , stats:[
       {anemiaLimit:7.99,result: 'Caso de Anemia SEVERA'},
@@ -43,7 +62,7 @@ const maleRules = [
    ]}
 ]
 
-const famaleRules = [
+const famaleRules: FamaleRules[] = [
    // women 12 - 14 no gestant
    {ageMax : 15 * YEAR ,isGestant: false,isPuerper:false, stats:[
       {anemiaLimit:7.99,result: 'Caso de Anemia SEVERA'},
@@ -102,24 +121,14 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
    if (ageDays < 12 * YEAR){
       genericRules.forEach((obj) =>{
          if(ageDays < obj.ageMax){
-            obj.stats.forEach((caseStat)=>{
-               if(hb <= caseStat.anemiaLimit){
-                  return caseStat.result + `\n ${info}`  
-               }
-            })
-            return 'Paciente sin cuadro de anemia \n' + info
+            getStats(obj.stats,hb,info)
          }
       })
    }
    else if(gender === 'M'){
       maleRules.forEach((obj)=>{
          if(ageDays < obj.ageMax){
-            obj.stats.forEach((caseStats)=>{
-               if(hb <= caseStats.anemiaLimit){
-                  return caseStats.result + `\n ${info}`
-               }
-            })
-            return `Paciente sin cuadro de anemia \n ${info}`
+            getStats(obj.stats,hb,info)
          }
       })
    }
@@ -129,12 +138,7 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
          famaleRules.forEach((obj)=>{
             if(obj.isGestant === false){
                if(obj.ageMax !== undefined && ageDays < obj.ageMax){
-                  obj.stats.forEach((caseStats)=>{
-                     if(hb <= caseStats.anemiaLimit){
-                        return caseStats.result + `\n ${info}`
-                     }
-                  })
-                  return `Paciente sin cuadro de anemia \n ${info}`
+                  getStats(obj.stats,hb,info)
                }
             }
          })
@@ -142,18 +146,39 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
       else if (isPuerper){
          famaleRules.forEach((obj)=>{
             if(obj.isPuerper){      
-               obj.stats.forEach((caseStats)=>{
-                  if(hb <= caseStats.anemiaLimit){
-                     return caseStats.result + `\n ${info}`
-                  }
-               })
-               return `Paciente sin cuadro de anemia \n ${info}`      
+               getStats(obj.stats,hb,info);   
             }
          })
       }
       else if (isGestant){
-         
+         if(gestationTime === '1'){ // this is the gestationTime from the function sign
+            famaleRules.forEach((obj)=>{
+               if(obj.isGestant && obj.gestationTime === 1){
+                  getStats(obj.stats,hb,info);  
+               }
+            })
+         }else if (gestationTime === '2'){
+            famaleRules.forEach((obj)=>{
+               if(obj.isGestant && obj.gestationTime === 2){
+                  getStats(obj.stats,hb,info);  
+               }
+            })
+         }else{
+            famaleRules.forEach((obj)=>{
+               if(obj.isGestant && obj.gestationTime === 3){
+                  getStats(obj.stats,hb,info);  
+               }
+            })
+         }
       }
    }
    return 'Shomethig happends bro, hi'
+}
+const getStats = (objStats:stats[],hb:number, info:string):string => {
+   objStats.forEach((caseStats)=>{
+      if(hb <= caseStats.anemiaLimit){
+         return caseStats.result + `\n ${info}`
+      }
+   })
+   return 'Paciente sin cuadro de anemia'
 }
