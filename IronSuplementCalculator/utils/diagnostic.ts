@@ -45,30 +45,30 @@ const maleRules = [
 
 const famaleRules = [
    // women 12 - 14 no gestant
-   {ageMax : 15 * YEAR ,isGestant: false, stats:[
+   {ageMax : 15 * YEAR ,isGestant: false,isPuerper:false, stats:[
       {anemiaLimit:7.99,result: 'Caso de Anemia SEVERA'},
       {anemiaLimit:10.90,result: 'Caso de Anemia MODERADA'},
       {anemiaLimit:11.90,result: 'Caso de Anemia LEVE' }
    ]},
    // women 15 yo or more
-   {ageMax : 150 * YEAR ,isGestant:false, stats:[
+   {ageMax : 150 * YEAR ,isGestant:false,isPuerper:false, stats:[
       {anemiaLimit:7.99,result: 'Caso de Anemia SEVERA'},
       {anemiaLimit:10.90,result: 'Caso de Anemia MODERADA'},
       {anemiaLimit:11.90,result: 'Caso de Anemia LEVE' }
    ]},
    
    // GESTANT
-   {isGestant:true,gestationTime: 1, stats:[
+   {isGestant:true, isPuerper: false,gestationTime: 1, stats:[
       {anemiaLimit:6.99,result: 'Caso de Anemia SEVERA'},
       {anemiaLimit:9.90,result: 'Caso de Anemia MODERADA'},
       {anemiaLimit:10.90,result: 'Caso de Anemia LEVE' }
    ]},
-   {isGestant:true,gestationTime: 2, stats:[
+   {isGestant:true,isPuerper: false,gestationTime: 2, stats:[
       {anemiaLimit:6.99,result: 'Caso de Anemia SEVERA'},
       {anemiaLimit:9.40,result: 'Caso de Anemia MODERADA'},
       {anemiaLimit:10.40,result: 'Caso de Anemia LEVE' }
    ]},
-   {isGestant:true,gestationTime: 3, stats:[
+   {isGestant:true,isPuerper: false,gestationTime: 3, stats:[
       {anemiaLimit:6.99,result: 'Caso de Anemia SEVERA'},
       {anemiaLimit:9.90,result: 'Caso de Anemia MODERADA'},
       {anemiaLimit:10.90,result: 'Caso de Anemia LEVE' }
@@ -111,7 +111,7 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
          }
       })
    }
-   if(gender === 'M'){
+   else if(gender === 'M'){
       maleRules.forEach((obj)=>{
          if(ageDays < obj.ageMax){
             obj.stats.forEach((caseStats)=>{
@@ -123,20 +123,37 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
          }
       })
    }
-// THE RULES FOR ALL WOMEN NEED TO HAVE THE SAME STRUCTURE (is gestant: false, isPuerper:true , etc)
-   if(gender === 'F'){
-      famaleRules.forEach((obj)=>{
-         if(obj.isGestant === false){
-            if(obj.ageMax !== undefined && ageDays < obj.ageMax){
+
+   else if(gender === 'F'){
+      if(!isGestant){
+         famaleRules.forEach((obj)=>{
+            if(obj.isGestant === false){
+               if(obj.ageMax !== undefined && ageDays < obj.ageMax){
+                  obj.stats.forEach((caseStats)=>{
+                     if(hb <= caseStats.anemiaLimit){
+                        return caseStats.result + `\n ${info}`
+                     }
+                  })
+                  return `Paciente sin cuadro de anemia \n ${info}`
+               }
+            }
+         })
+      }
+      else if (isPuerper){
+         famaleRules.forEach((obj)=>{
+            if(obj.isPuerper){      
                obj.stats.forEach((caseStats)=>{
                   if(hb <= caseStats.anemiaLimit){
                      return caseStats.result + `\n ${info}`
                   }
                })
-               return `Paciente sin cuadro de anemia \n ${info}`
+               return `Paciente sin cuadro de anemia \n ${info}`      
             }
-         }
-      })
+         })
+      }
+      else if (isGestant){
+         
+      }
    }
    return 'Shomethig happends bro, hi'
 }
