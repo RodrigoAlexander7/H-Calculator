@@ -14,7 +14,10 @@ export const patientSchema = z.object({
    gestationTime : gestationTimeSchema.optional(),
 
    hbObserved: z.number(),
+   hbFixed: z.number(),
+   diagnostic: z.string(),
    location : locationSchema
+
 })
 
 export type Patient = z.infer<typeof patientSchema>;
