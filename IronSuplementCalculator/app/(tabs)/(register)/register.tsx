@@ -1,5 +1,6 @@
 import DateTimePicker from '@react-native-community/datetimepicker';
 
+import { Patient, patientSchema } from '@/src/dto/patient.dto';
 import dayjs from 'dayjs';
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
@@ -8,11 +9,38 @@ import { Button, PaperProvider, RadioButton, TextInput } from 'react-native-pape
 export default function RegisterScreen(){
    const [name, setName] = useState('')
    const [lastname, setLastname] = useState('')
-   const [date, setDate] = useState<dayjs.Dayjs>(dayjs())
+   const [birthDate, setBirthDate] = useState<dayjs.Dayjs>(dayjs())
    const [showPicker, setShowPicker] = useState<boolean>(false)
-   const [gender, setGender] = useState<string>('')
-   const [fameleAditional, SetFameleAditional] = useState<string>('none')
-   const [gestationTime, SetGestationTime] = useState<string>('none')
+   const [gender, setGender] = useState<'M'| 'F'>('M')
+   const [femaleAditional, SetFemaleAditional] = useState<'G'|'P'|null>(null)
+   const [gestationTime, SetGestationTime] = useState<'1'|'2'|'3'|null>(null)
+
+
+
+   const handleSubmit = ()=>{
+      const patient:Patient = {
+         name,
+         lastname,
+         birthDate: birthDate.toISOString(),
+         gender,
+         femaleState: femaleAditional,
+         hbObserved: 0,
+         hbFixed: 0,
+         diagnostic: '',
+         location: {
+            department: '',
+            province: '',
+            district: '',
+            town: '',
+         }
+      }
+      const result = patientSchema.safeParse(patient)
+      if(!result.success){
+         console.log('Errors found', result.error.format())
+      }
+      console.log(result.data)
+
+   }
 
    return(
       <PaperProvider>
@@ -37,7 +65,7 @@ export default function RegisterScreen(){
                      label='Fecha de Nacimiento'
                      editable={false}
                      style={{backgroundColor:'white'}}
-                     value = {dayjs(date).format('DD-MMMM-YYYY')}
+                     value = {dayjs(birthDate).format('DD-MMMM-YYYY')}
                   />
                </TouchableOpacity>
 
@@ -45,15 +73,17 @@ export default function RegisterScreen(){
                   <DateTimePicker
                   mode= 'date'
                   display='compact'
-                  value={date.toDate()}   
+                  value={birthDate.toDate()}   
                   onChange={(e, selectDate)=>{
-                     selectDate && setDate(dayjs(selectDate))
+                     selectDate && setBirthDate(dayjs(selectDate))
                      setShowPicker(false)
                   }}   
                />
                )}
                <Text>Seleccione Genero</Text>
-               <RadioButton.Group onValueChange={setGender} value = {gender}>
+               <RadioButton.Group onValueChange={(v)=>{
+                  if(v === 'M' ||v === 'F') setGender(v)
+               }} value = {gender}>
                   <RadioButton.Item label='Masculino' value='M'/>
                   <RadioButton.Item label='Femenino' value='F'/>
                </RadioButton.Group>
@@ -61,18 +91,23 @@ export default function RegisterScreen(){
                {gender === 'F' && (
                   <View>
                      <Text>Por favor especifique</Text>                  
-                     <RadioButton.Group onValueChange={SetFameleAditional} value = {fameleAditional}>
-                        <RadioButton.Item label='Sin Adicional' value='none'/>
+                     <RadioButton.Group onValueChange={(v)=>{
+                        if(v === 'G'||v==='P')   SetFemaleAditional(v)
+                        else if (v === '') SetFemaleAditional(null)
+                     }} value = {''}>
+                        <RadioButton.Item label='Sin Adicional' value=''/>
                         <RadioButton.Item label='Gestante' value='G'/>
                         <RadioButton.Item label='Puerpera' value='P'/>
                      </RadioButton.Group> 
                   </View>
                )}
 
-               {fameleAditional === 'G' && (
+               {femaleAditional === 'G' && (
                   <View>
                      <Text>Tiempo de Gestacion</Text>                  
-                     <RadioButton.Group onValueChange={SetGestationTime} value = {gestationTime}>
+                     <RadioButton.Group onValueChange={(v)=>{
+                        if(v ==='1'||v==='2' || v==='3') SetGestationTime(v)
+                     }} value = {'1'}>
                         <RadioButton.Item label='1er Trimestre' value='1'/>
                         <RadioButton.Item label='2do Trimestre' value='2'/>
                         <RadioButton.Item label='3er Trimestre' value='3'/>
@@ -80,7 +115,8 @@ export default function RegisterScreen(){
                   </View>
                )}
 
-               <Button mode='contained-tonal'>
+               <Button mode='contained-tonal' onPress={()=>{handleSubmit}
+               }>
                   Registrar
                </Button>
 
