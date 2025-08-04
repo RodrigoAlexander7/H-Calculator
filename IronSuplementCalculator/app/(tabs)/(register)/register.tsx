@@ -1,4 +1,4 @@
-import { PatientForm } from '@/components/PatientForm'
+import { PatientForm } from '@/patient/components/PatientForm'
 import { ScrollView } from 'react-native'
 import { PaperProvider } from 'react-native-paper'
 

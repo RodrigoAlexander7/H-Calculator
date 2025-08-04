@@ -1,6 +1,6 @@
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-import { usePatientForm } from '@/hooks/usePatientForm';
+import { usePatientForm } from '@/patient/hooks/usePatientForm';
 import dayjs from 'dayjs';
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
