@@ -28,10 +28,10 @@ export default function RegisterScreen(){
          hbFixed: 0,
          diagnostic: '',
          location: {
-            department: '',
-            province: '',
-            district: '',
-            town: '',
+            department: 'notAsignedYet',
+            province: 'notAsignedYet',
+            district: 'notAsignedYet',
+            town: 'notAsignedYet',
          }
       }
       const result = patientSchema.safeParse(patient)
@@ -115,7 +115,7 @@ export default function RegisterScreen(){
                   </View>
                )}
 
-               <Button mode='contained-tonal' onPress={()=>{handleSubmit}
+               <Button mode='contained-tonal' onPress={()=>{handleSubmit()}
                }>
                   Registrar
                </Button>
