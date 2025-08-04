@@ -95,9 +95,9 @@ export function PatientForm(){
                )}
 
                <Button mode='contained-tonal' onPress={()=>{
+                  console.log(patient)  
                   if(isValid()) return patient
-                  console.log(patient)
-               }
+                  }
                }>
                   Registrar
                </Button>
