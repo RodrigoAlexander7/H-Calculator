@@ -40,6 +40,7 @@ export default function DiagnosticScreen() {
    const [district,setDistrict] = useState<Location>('')
    const [town,setTown] = useState<Location>('')
    const [adjustHB,setAdjustHB] = useState<Location>('')
+   const [diagnosis ,setDiagnosis] = useState<string|undefined>('')
    
    const [hb,setHb] = useState<string>('')
 
@@ -146,7 +147,8 @@ export default function DiagnosticScreen() {
                   onPress = {()=>{
                      console.log(adjustHB)
                      const data = getPatientData(patient)
-                     console.log(calculateDiagnostic(
+                     console.log(`print data ${JSON.stringify(data)}\n`)
+                     setDiagnosis(calculateDiagnostic(
                         data.dateBirth,
                         data.gender || 'M',
                         data.isGestant,
@@ -157,7 +159,8 @@ export default function DiagnosticScreen() {
                      ))
                   }}
                />
-            </View>   
+            </View>
+            <Text>{diagnosis} </Text>   
          </View>
       </PaperProvider>
    )
