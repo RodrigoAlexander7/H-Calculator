@@ -3,8 +3,8 @@ import { locationSchema } from './location.dto';
 
 
 const genderSchema =z.enum(['M','F'],'gender are just M or F');
-const femaleStateSchema = z.enum(['G','P','none']).nullable();
-const gestationTimeSchema = z.enum(['1','2','3','none']).nullable(); 
+const femaleStateSchema = z.enum(['G','P']).nullable();
+const gestationTimeSchema = z.enum(['1','2','3']).nullable(); 
 
 export const patientSchema = z.object({
    name: z.string().min(1,'name can not be null'),
