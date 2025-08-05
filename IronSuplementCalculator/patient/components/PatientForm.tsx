@@ -2,9 +2,11 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 import { usePatientForm } from '@/patient/hooks/usePatientForm';
 import dayjs from 'dayjs';
+import { router } from 'expo-router';
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Button, PaperProvider, RadioButton, TextInput } from 'react-native-paper';
+import { usePatientStore } from '../store/patientStore';
 
 export function PatientForm(){
    const [showPicker, setShowPicker] = useState<boolean>(false)
@@ -96,7 +98,13 @@ export function PatientForm(){
 
                <Button mode='contained-tonal' onPress={()=>{
                   console.log(patient)  
-                  if(isValid()) return patient
+                  if(!isValid()) return 
+
+                  // savig patient globally with Zustand
+                  usePatientStore.getState().setPatient(patient)
+                  //Go to diagnostic screen
+                  router.push('/(tabs)/(diagnostic)/diagnostic')
+
                   }
                }>
                   Registrar

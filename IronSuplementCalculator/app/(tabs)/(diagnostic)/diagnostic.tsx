@@ -1,3 +1,5 @@
+import { usePatientStore } from '@/patient/store/patientStore';
+import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { PaperProvider, TextInput } from 'react-native-paper';
@@ -45,6 +47,8 @@ export default function DiagnosticScreen() {
    const districtItems = getItem(province_district, province)
    const townItems = getItem(district_town, district)
    
+   // global patient data
+   const { patient, setPatient } = usePatientStore()
 
    const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
       if(typeof value !== 'string'){
@@ -139,7 +143,19 @@ export default function DiagnosticScreen() {
                <Text>Calcular diagnostico</Text>   
                <Button
                   label='Calcular'   
-                  onPress = {()=>console.log(adjustHB)}
+                  onPress = {()=>{
+                     console.log(adjustHB)
+                     const data = getPatientData(patient)
+                     console.log(calculateDiagnostic(
+                        data.dateBirth,
+                        data.gender || 'M',
+                        data.isGestant,
+                        data.isPuerper,
+                        data.gestationTime || '0',
+                        hb,
+                        adjustHB
+                     ))
+                  }}
                />
             </View>   
          </View>

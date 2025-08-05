@@ -27,7 +27,8 @@ type PatientStore = {
    clear: ()=> void;
 }
 
-const usePatientStore = create<PatientStore>((set, get)=> ({
+// Creating a global patient to use in other screens
+export const usePatientStore = create<PatientStore>((set, get)=> ({
    patient: initialPatientData,
    setPatient: (patientDto:Patient) => set({patient:patientDto}),
    isValid: () => patientSchema.safeParse(get().patient).success,

@@ -1,3 +1,4 @@
+import { Patient } from '@/patient/dto/patient.dto';
 import dayjs from 'dayjs';
 
 const WEEK : number = 7
@@ -103,7 +104,7 @@ const famaleRules: FamaleRules[] = [
 ]   
 
 
-const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boolean,isPuerper:boolean,gestationTime:string, hbStr:string, hbCorrectionStr:string):string|undefined => {
+export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boolean,isPuerper:boolean,gestationTime:string, hbStr:string, hbCorrectionStr:string):string|undefined => {
    const ageDays : number = Number(dayjs().diff(dayjs(dateBirthStr),'day'))
    const hbCorrection:number = Number(hbCorrectionStr)
    let hb:number = Number(hbStr)
@@ -174,6 +175,17 @@ const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boole
    }
    return 'Shomethig happends bro, hi'
 }
+export const getPatientData = (patient: Patient) => {
+   return {
+      dateBirth: patient.birthDate,
+      gender: patient.gender,
+      isGestant: patient.femaleState === 'G',
+      isPuerper: patient.femaleState === 'P',
+      gestationTime: patient.femaleState ==='G'? patient.gestationTime : '0'
+   }
+}
+//(,, hbStr:string, hbCorrectionStr:string):string|undefined => {
+
 const getStats = (objStats:stats[],hb:number, info:string):string => {
    objStats.forEach((caseStats)=>{
       if(hb <= caseStats.anemiaLimit){
