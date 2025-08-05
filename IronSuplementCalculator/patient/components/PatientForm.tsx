@@ -73,7 +73,7 @@ export function PatientForm(){
                      <RadioButton.Group onValueChange={(v)=>{
                         if(v === 'G'||v==='P')   SetFemaleAditional(v)
                         else if (v === '') SetFemaleAditional(null)
-                     }} value = {''}>
+                     }} value = {femaleAditional || ''}>
                         <RadioButton.Item label='Sin Adicional' value=''/>
                         <RadioButton.Item label='Gestante' value='G'/>
                         <RadioButton.Item label='Puerpera' value='P'/>
@@ -86,7 +86,7 @@ export function PatientForm(){
                      <Text>Tiempo de Gestacion</Text>                  
                      <RadioButton.Group onValueChange={(v)=>{
                         if(v ==='1'||v==='2' || v==='3') SetGestationTime(v)
-                     }} value = {'1'}>
+                     }} value = {gestationTime || '1'}>
                         <RadioButton.Item label='1er Trimestre' value='1'/>
                         <RadioButton.Item label='2do Trimestre' value='2'/>
                         <RadioButton.Item label='3er Trimestre' value='3'/>

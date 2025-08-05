@@ -16,6 +16,7 @@ export const usePatientForm = ()=>{
       birthDate: birthDate.toISOString(),
       gender,
       femaleState: femaleAditional,
+      gestationTime,
       hbObserved: 0,
       hbFixed: 0,
       diagnostic: '',
