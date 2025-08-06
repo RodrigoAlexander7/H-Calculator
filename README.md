@@ -49,7 +49,7 @@ Puedes escanear el código QR con la app de Expo Go desde tu teléfono para prob
 ### Alternativamente
 
 También puedes descargar la app directamente desde **Expo EAS** usando el siguiente enlace:
-📲 [Descargar App DosisFe en Expo](https://expo.dev/@usuario/dosisfe)
+📲 [Descargar App DosisFe en Expo](https://expo.dev/accounts/rodrygoleu/projects/IronSuplementCalculator/builds/a37bfbd7-ae4a-4485-b29f-338e6d4950da)
 
 ## 🔭 Futuras funcionalidades
 
