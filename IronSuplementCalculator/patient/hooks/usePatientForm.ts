@@ -25,6 +25,7 @@ export const usePatientForm = ()=>{
          province: 'notAsignedYet',
          district: 'notAsignedYet',
          town: 'notAsignedYet',
+         adjustHB: 'notAsignedYet'
       }
    }
 

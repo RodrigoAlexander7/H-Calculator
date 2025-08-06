@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { locationSchema } from './location.dto';
+import { locationSchema } from '../../location/dto/location.dto';
 
 
 const genderSchema =z.enum(['M','F'],'gender are just M or F');

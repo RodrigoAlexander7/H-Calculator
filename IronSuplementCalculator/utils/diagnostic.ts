@@ -103,7 +103,6 @@ const femaleRules: FemaleRules[] = [
 
 ]   
 
-
 export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boolean,isPuerper:boolean,gestationTime:string, hbStr:string, hbCorrectionStr:string):string|undefined => {
    const ageDays : number = Number(dayjs().diff(dayjs(dateBirthStr),'day'))
    const hbCorrection:number = Number(String(hbCorrectionStr).replace(',','.'))
@@ -117,8 +116,6 @@ export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestan
                      `\n Factor Correcion por Altura: ${hbCorrection}` +
                      `\n HB ajustada: ${hb}` 
 
-
-
    if (ageDays < 12 * YEAR){
       const gStast = genericRules.find( obj => ageDays < obj.ageMax)?.stats 
       if(gStast)  return getResult(gStast,hb,info)   
@@ -128,8 +125,6 @@ export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestan
       const mStats = maleRules.find(obj => ageDays < obj.ageMax)?.stats
       if(mStats) return getResult(mStats,hb,info)
    }
-      
-   
 
    else if(gender === 'F'){
       if (isPuerper){
@@ -139,7 +134,6 @@ export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestan
       else if (isGestant){
          const fStats = femaleRules.find(obj => obj.isGestant && String(obj.gestationTime) === gestationTime)?.stats
          if (fStats) return getResult(fStats,hb,info);
-         
       }
       else {
          const fStats = femaleRules.find(obj => obj.isGestant === false && obj.ageMax !== undefined && ageDays < obj.ageMax)?.stats

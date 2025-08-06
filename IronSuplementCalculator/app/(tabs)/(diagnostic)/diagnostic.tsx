@@ -1,14 +1,14 @@
 import { usePatientStore } from '@/patient/store/patientStore';
 import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
+import department_province from '@/utils/json/department_province.json';
+import departments from '@/utils/json/departments.json';
+import district_town from '@/utils/json/district_town.json';
+import province_district from '@/utils/json/province_district.json';
+import townAdjustHbJson from '@/utils/json/town_adjustHB.json';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { PaperProvider, TextInput } from 'react-native-paper';
 import { Button, Picker, PickerValue } from 'react-native-ui-lib';
-import department_province from '../../../utils/department_province.json';
-import departments from '../../../utils/departments.json';
-import district_town from '../../../utils/district_town.json';
-import province_district from '../../../utils/province_district.json';
-import townAdjustHbJson from '../../../utils/town_adjustHB.json';
 
 // adding this cause otherwise don't read it cause is too large
 const town_adjustHB:       TupleJson = townAdjustHbJson       as TupleJson;
@@ -21,12 +21,14 @@ type Tuple = {
 }
 type TupleJson = Tuple[]
 
-
+//tuple are like Arequipa [miraflores, arequipa, selva alegre] 
+//              Caraveli [distrito, etc]
 const getItem = (tuple: TupleJson, location:Location) => {
+   // if i looking for Arequipa, locationList are -> [miraflores, arequipa, selva alegre]  (solo sublocation)
    const locationList = tuple.find((d) => d.location === location )?.sublocation || []
    const sublocation = locationList.map((sub)=>(
       {
-         label: sub,
+         label: sub,//the label for the pickers
          value: sub,
       }
    ))
