@@ -137,16 +137,9 @@ export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestan
          if (fStats) return getResult(fStats,hb,info);  
       }
       else if (isGestant){
-         if(gestationTime === '1'){ // this is the gestationTime from the function sign
-            const fStats = femaleRules.find(obj => obj.isGestant && obj.gestationTime === 1)?.stats
-            if (fStats) return getResult(fStats,hb,info);
-         }else if (gestationTime === '2'){
-            const fStats = femaleRules.find( obj => obj.isGestant && obj.gestationTime === 2)?.stats
-            if(fStats) return getResult(fStats,hb,info); 
-         }else{
-            const fStats = femaleRules.find( obj => obj.isGestant && obj.gestationTime === 3)?.stats
-            if(fStats) return getResult(fStats,hb,info);                
-         }
+         const fStats = femaleRules.find(obj => obj.isGestant && String(obj.gestationTime) === gestationTime)?.stats
+         if (fStats) return getResult(fStats,hb,info);
+         
       }
       else {
          const fStats = femaleRules.find(obj => obj.isGestant === false && obj.ageMax !== undefined && ageDays < obj.ageMax)?.stats
