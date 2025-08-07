@@ -1,82 +1,29 @@
+import { useLocationData } from '@/location/hooks/useLocationData';
 import { usePatientStore } from '@/patient/store/patientStore';
 import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
-import department_province from '@/utils/json/department_province.json';
 import departments from '@/utils/json/departments.json';
-import district_town from '@/utils/json/district_town.json';
-import province_district from '@/utils/json/province_district.json';
-import townAdjustHbJson from '@/utils/json/town_adjustHB.json';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { PaperProvider, TextInput } from 'react-native-paper';
-import { Button, Picker, PickerValue } from 'react-native-ui-lib';
-
-// adding this cause otherwise don't read it cause is too large
-const town_adjustHB:       TupleJson = townAdjustHbJson       as TupleJson;
-
-type Location = string
-type LocationKey = 'department'|'province'|'district'|'town'|'adjustHB'
-type Tuple = {
-   location: string;
-   sublocation: string[];
-}
-type TupleJson = Tuple[]
-
-//tuple are like Arequipa [miraflores, arequipa, selva alegre] 
-//              Caraveli [distrito, etc]
-const getItem = (tuple: TupleJson, location:Location) => {
-   // if i looking for Arequipa, locationList are -> [miraflores, arequipa, selva alegre]  (solo sublocation)
-   const locationList = tuple.find((d) => d.location === location )?.sublocation || []
-   const sublocation = locationList.map((sub)=>(
-      {
-         label: sub,//the label for the pickers
-         value: sub,
-      }
-   ))
-   return sublocation
-}
-
+import { Button, Picker } from 'react-native-ui-lib';
 
 export default function DiagnosticScreen() {
-   const [department,setDepartment] = useState<Location>('')
-   const [province,setProvince] = useState<Location>('')
-   const [district,setDistrict] = useState<Location>('')
-   const [town,setTown] = useState<Location>('')
-   const [adjustHB,setAdjustHB] = useState<Location>('')
+
+   const {
+      location, setLocation,
+      onLocationChange,
+      departmentItems,
+      provinceItems,
+      districtItems,
+      townItems
+   } = useLocationData()
+
    const [diagnosis ,setDiagnosis] = useState<string|undefined>('')
    
    const [hb,setHb] = useState<string>('')
 
-   const provinceItems = getItem(department_province, department)
-   const districtItems = getItem(province_district, province)
-   const townItems = getItem(district_town, district)
-   
    // global patient data
    const { patient, setPatient } = usePatientStore()
-
-   const onLocationChange = (key:LocationKey) =>(value:PickerValue) => {
-      if(typeof value !== 'string'){
-         console.warn('invalid province value')
-         return
-      } 
-      if(key === 'department'){
-         setDepartment(value)
-         setProvince('')
-      } 
-      if(key === 'province'){
-         setProvince(value)
-      } 
-      if(key === 'district'){
-         setDistrict(value)
-      }
-      if(key === 'town'){
-         setTown(value)
-         const numberHB = getItem(town_adjustHB, value)
-         setAdjustHB(numberHB[0].value)
-      }
-      if(key === 'adjustHB'){
-      }
-   }
-
    
    return(
       <PaperProvider>
@@ -103,7 +50,7 @@ export default function DiagnosticScreen() {
                   labelColor= 'black'
                   placeholder='Departamento'
                   items = {departments}
-                  value={department}
+                  value={location.department}
                   onChange={onLocationChange('department')}
                />
                <Picker
@@ -111,11 +58,11 @@ export default function DiagnosticScreen() {
                   label='Selecciona Provincia'
                   labelColor= 'black'
                   placeholder='Provincia'
-                  editable={department !== ''}
+                  editable={location.department !== ''}
                   showSearch
                   searchStyle={{color:'black'}}
                   items = {provinceItems}
-                  value={province}
+                  value={location.province}
                   onChange={onLocationChange('province')}
                />
                <Picker
@@ -123,11 +70,11 @@ export default function DiagnosticScreen() {
                   label='Selecciona Distrito'
                   labelColor= 'black'
                   placeholder='Distrito'
-                  editable={province !== ''}
+                  editable={location.province !== ''}
                   showSearch
                   searchStyle={{color:'black'}}
                   items = {districtItems}
-                  value={district}
+                  value={location.district}
                   onChange={onLocationChange('district')}
                />
                <Picker
@@ -135,11 +82,11 @@ export default function DiagnosticScreen() {
                   label='Selecciona Centro Poblado'
                   labelColor= 'black'
                   placeholder='Centro Poblado'
-                  editable={district !== ''}
+                  editable={location.district !== ''}
                   showSearch
                   searchStyle={{color:'black'}}
                   items = {townItems}
-                  value={town}
+                  value={location.town}
                   onChange={onLocationChange('town')}
                />
 
@@ -147,7 +94,7 @@ export default function DiagnosticScreen() {
                <Button
                   label='Calcular'   
                   onPress = {()=>{
-                     console.log(adjustHB)
+                     console.log(location.adjustHB)
                      const data = getPatientData(patient)
                      console.log(`print data ${JSON.stringify(data)}\n`)
                      setDiagnosis(calculateDiagnostic(
@@ -157,7 +104,7 @@ export default function DiagnosticScreen() {
                         data.isPuerper,
                         data.gestationTime || '0',
                         hb,
-                        adjustHB
+                        location.adjustHB
                      ))
                   }}
                />

@@ -3,6 +3,7 @@ import departments from '@/utils/json/departments.json';
 import district_town from '@/utils/json/district_town.json';
 import province_district from '@/utils/json/province_district.json';
 import { useState } from "react";
+import { PickerValue } from 'react-native-ui-lib';
 import { Location } from "../dto/location.dto";
 
 const townAdjustHb: TupleJson = require('@/utils/json/town_adjustHB.json') as TupleJson;
@@ -37,7 +38,11 @@ export const useLocationData = ()=>{
       adjustHB: '',
    })
 
-   const onLocationChange = (key: keyof Location) => (value: string)=> {
+   const onLocationChange = (key: keyof Location) => (value: PickerValue)=> {
+      if(typeof value !== 'string'){
+         console.warn('invalid province value')
+         return
+      }
       setLocation(prev => {
          switch(key){
             case 'department':
