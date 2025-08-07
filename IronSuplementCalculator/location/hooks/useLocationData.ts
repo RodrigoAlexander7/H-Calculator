@@ -82,7 +82,7 @@ export const useLocationData = ()=>{
    const departmentItems = departments
    const provinceItems = getItem(department_province, location.department)
    const districtItems = getItem(province_district, location.province)
-   const townItems = getItem(district_town, location.department)
+   const townItems = getItem(district_town, location.district)
 
    return {
       location, setLocation,
