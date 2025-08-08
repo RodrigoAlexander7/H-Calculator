@@ -7,8 +7,7 @@ const femaleStateSchema = z.enum(['G','P']).nullable();
 const gestationTimeSchema = z.enum(['1','2','3']).nullable(); 
 
 export const patientSchema = z.object({
-   name: z.string().min(1,'name can not be null'),
-   lastname: z.string().min(1,'lastname can not be null'),
+   idDocument: z.string().min(1,'name can not be null'),
    birthDate: z.string().min(1, 'birthdate can not be null'),
    gender: genderSchema.optional(),
    femaleState : femaleStateSchema.optional().nullable(),

@@ -3,16 +3,14 @@ import dayjs from 'dayjs';
 import { useState } from "react";
 
 export const usePatientForm = ()=>{
-   const [name, setName] = useState('')
-   const [lastname, setLastname] = useState('')
+   const [idDocument, setIdDocument] = useState('')
    const [birthDate, setBirthDate] = useState<dayjs.Dayjs>(dayjs())
    const [gender, setGender] = useState<'M'| 'F'>('M')
    const [femaleAditional, SetFemaleAditional] = useState<'G'|'P'|null>(null)
    const [gestationTime, SetGestationTime] = useState<'1'|'2'|'3'|null>(null)
 
    const patient:Patient = {
-      name,
-      lastname,
+      idDocument,
       birthDate: birthDate.toISOString(),
       gender,
       femaleState: femaleAditional,
@@ -35,8 +33,7 @@ export const usePatientForm = ()=>{
    } 
 
    return {
-      name, setName,
-      lastname, setLastname,
+      idDocument, setIdDocument,
       birthDate, setBirthDate,
       gender, setGender,
       femaleAditional, SetFemaleAditional,
