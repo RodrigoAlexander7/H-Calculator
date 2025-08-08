@@ -12,8 +12,7 @@ export function PatientForm(){
    const [showPicker, setShowPicker] = useState<boolean>(false)
    
    const {
-      name, setName,
-      lastname, setLastname,
+      idDocument, setIdDocument,
       birthDate, setBirthDate,
       gender, setGender,
       femaleAditional, SetFemaleAditional,
@@ -30,14 +29,8 @@ export function PatientForm(){
             <TextInput
                label= 'Ingrese Nombre'
                style={{backgroundColor:'white'}}
-               onChangeText = {setName}
-               value={name}
-            />
-            <TextInput
-               label= 'Ingrese Apellido'
-               style={{backgroundColor:'white'}}
-               onChangeText={setLastname}
-               value={lastname}
+               onChangeText = {setIdDocument}
+               value={idDocument}
             />
 
             <TouchableOpacity onPress={()=> setShowPicker(true)}> 

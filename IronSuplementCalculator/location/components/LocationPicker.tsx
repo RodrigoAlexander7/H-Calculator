@@ -2,41 +2,11 @@ import { useLocationData } from '@/location/hooks/useLocationData';
 import { usePatientStore } from '@/patient/store/patientStore';
 import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
 import departments from '@/utils/json/departments.json';
-import * as Location from 'expo-location';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 import { Picker } from 'react-native-ui-lib';
 
-export function GetLocationButton(){
-   // these are the locations from expo-location to get the phone location
-   const [deviceLocation, setDeviceLocation] = useState<Location.LocationObject | null>(null);
-   useEffect(()=>{
-      async function getCurrentLocation(){
-         // using destructing to get the status property from Location.req...
-         let {status} = await Location.requestForegroundPermissionsAsync()
-         if (status !== 'granted'){
-            console.warn('Error Permission to acces location was denied');
-            return;
-         }
-
-         let location = await Location.getCurrentPositionAsync();
-         setDeviceLocation(location) 
-      }
-      getCurrentLocation()
-   },[]);
-   return(
-      <View>
-         <Button mode='contained-tonal'
-         onPress={
-            ()=> console.log(JSON.stringify(deviceLocation))
-         }>
-            Ubicacion Automatica
-         </Button>
-      </View>
-   )
-   
-}
 
 export function LocationPicker() {
 
