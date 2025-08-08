@@ -27,7 +27,7 @@ export function PatientForm(){
          <Text>Registro de Paciente</Text>
          <View>
             <TextInput
-               label= 'Ingrese Nombre'
+               label= 'Ingrese DNI'
                style={{backgroundColor:'white'}}
                onChangeText = {setIdDocument}
                value={idDocument}
