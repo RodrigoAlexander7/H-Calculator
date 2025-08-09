@@ -1,7 +1,6 @@
 import { z } from 'zod';
 import { locationSchema } from '../../location/dto/location.dto';
 
-
 const genderSchema =z.enum(['M','F'],'gender are just M or F');
 const femaleStateSchema = z.enum(['G','P']).nullable();
 const gestationTimeSchema = z.enum(['1','2','3']).nullable(); 

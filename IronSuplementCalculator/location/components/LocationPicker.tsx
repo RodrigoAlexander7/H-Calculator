@@ -4,8 +4,7 @@ import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
 import departments from '@/utils/json/departments.json';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
-import { Button, TextInput } from 'react-native-paper';
-import { Picker } from 'react-native-ui-lib';
+import { Button, Picker, TextField } from 'react-native-ui-lib';
 
 
 export function LocationPicker() {
@@ -29,12 +28,11 @@ export function LocationPicker() {
    return(
       <View >
          <View>
-
-            <TextInput
-               label='HB Observada'
+            <Text>HB Observada</Text>
+            <TextField
                onChangeText={setHb}
                value= {hb}
-               keyboardType='numeric'
+               keyboardType="number-pad"
                style={
                   {backgroundColor: 'white'}
                }
@@ -91,7 +89,7 @@ export function LocationPicker() {
             />
 
             <Text>Calcular diagnostico</Text>   
-            <Button mode='contained-tonal' 
+            <Button label ='Registrar'
                onPress = {()=>{
                   console.log(location.adjustHB)
                   const data = getPatientData(patient)
@@ -108,7 +106,7 @@ export function LocationPicker() {
                   setPatientLocation(location);
                   console.log(patient)
                }}
-            >Calcular</Button>
+            />
          </View>
          <Text>{diagnosis} </Text>   
       </View>
