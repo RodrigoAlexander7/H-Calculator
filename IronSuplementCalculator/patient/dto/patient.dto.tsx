@@ -12,9 +12,10 @@ export const patientSchema = z.object({
    femaleState : femaleStateSchema.optional().nullable(),
    gestationTime : gestationTimeSchema.optional().nullable(),
 
-   hbObserved: z.number(),
-   hbFixed: z.number(),
-   diagnostic: z.string(),
+   weight: z.number().optional(),
+   hbObserved: z.number().optional(),
+   hbFixed: z.number().optional(),
+   diagnostic: z.string().optional(),
    location : locationSchema
 
 })

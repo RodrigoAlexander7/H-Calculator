@@ -6,13 +6,16 @@ export const usePatientForm = ()=>{
    const [idDocument, setIdDocument] = useState('')
    const [birthDate, setBirthDate] = useState<dayjs.Dayjs>(dayjs())
    const [gender, setGender] = useState<'M'| 'F'>('M')
-   const [femaleAditional, SetFemaleAditional] = useState<'G'|'P'|null>(null)
-   const [gestationTime, SetGestationTime] = useState<'1'|'2'|'3'|null>(null)
+   const [femaleAditional, setFemaleAditional] = useState<'G'|'P'|null>(null)
+   const [gestationTime, setGestationTime] = useState<'1'|'2'|'3'|null>(null)
+   const [weight, setWeight] = useState<number>(0);
+
 
    const patient:Patient = {
       idDocument,
       birthDate: birthDate.toISOString(),
       gender,
+      weight,
       femaleState: femaleAditional,
       gestationTime,
       hbObserved: 0,
@@ -36,8 +39,9 @@ export const usePatientForm = ()=>{
       idDocument, setIdDocument,
       birthDate, setBirthDate,
       gender, setGender,
-      femaleAditional, SetFemaleAditional,
-      gestationTime, SetGestationTime,
+      weight, setWeight,
+      femaleAditional, setFemaleAditional,
+      gestationTime, setGestationTime,
       patient,
       isValid,
    }
