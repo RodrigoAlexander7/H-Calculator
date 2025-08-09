@@ -12,6 +12,7 @@ import { usePatientStore } from '../store/patientStore';
 
    export function PatientForm() {
       const [showPicker, setShowPicker] = useState<boolean>(false);
+      const [auxWeight, setAuxWeight] = useState<string>('');
 
       const {
          idDocument, setIdDocument,
@@ -52,6 +53,15 @@ import { usePatientStore } from '../store/patientStore';
                   keyboardType="number-pad"
                   maxLength={8}
                />
+
+               <Text>Peso del paciente</Text>
+               <TextField
+                  onChangeText = {setAuxWeight}
+                  value={auxWeight}
+                  keyboardType="number-pad"
+               />
+
+
             </View>
 
             <View>
@@ -64,14 +74,6 @@ import { usePatientStore } from '../store/patientStore';
                   />
                </TouchableOpacity>
 
-               <Text>Peso del paciente</Text>
-               <TextField
-                  onChangeText = {
-                     (v)=> setWeight(Number(v)) 
-                  }
-                  value={String(weight)}
-                  keyboardType="number-pad"
-               />
          
                {showPicker &&
                   <DateTimePicker
@@ -137,6 +139,7 @@ import { usePatientStore } from '../store/patientStore';
                disabled={!isValid()}
                onPress={() => {
                   if (!isValid()) return;
+                  setWeight(Number(auxWeight))
                   usePatientStore.getState().setPatient(patient);
                   router.push('/(tabs)/(diagnostic)/diagnostic');
                }}
