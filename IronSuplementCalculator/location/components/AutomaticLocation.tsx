@@ -2,12 +2,12 @@
 UNUSED COMPONENT TO AVOID ERRORS WITH INTEGRATION
 - After use the automatic locaition button (that works) the app cause
    error when tried to use a Text Input
-*/
+
 
 import * as Location from 'expo-location';
 import { useState } from 'react';
 import { View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Button } from 'react-native-ui-lib';
 
 
 export function AutomaticLocation(){
@@ -28,7 +28,7 @@ export function AutomaticLocation(){
 
    return(
       <View>
-         <Button mode='contained-tonal'
+         <Button 
          onPress={
             ()=> {
                getCurrentLocation()
@@ -41,3 +41,5 @@ export function AutomaticLocation(){
    )
    
 }
+
+*/

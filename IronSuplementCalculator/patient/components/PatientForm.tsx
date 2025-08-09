@@ -1,108 +1,137 @@
-import DateTimePicker from '@react-native-community/datetimepicker';
-
 import { usePatientForm } from '@/patient/hooks/usePatientForm';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import dayjs from 'dayjs';
+import 'dayjs/locale/es';
 import { router } from 'expo-router';
-import { useState } from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { Button, RadioButton, TextInput } from 'react-native-paper';
+import { useState } from 'react';
+import { Platform, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Button, RadioButton, RadioGroup, TextField } from 'react-native-ui-lib';
 import { usePatientStore } from '../store/patientStore';
 
-export function PatientForm(){
-   const [showPicker, setShowPicker] = useState<boolean>(false)
-   
-   const {
-      idDocument, setIdDocument,
-      birthDate, setBirthDate,
-      gender, setGender,
-      femaleAditional, SetFemaleAditional,
-      gestationTime, SetGestationTime,
-      patient,
-      isValid,
-   } = usePatientForm()
+   dayjs.locale('es');
 
+   export function PatientForm() {
+      const [showPicker, setShowPicker] = useState<boolean>(false);
 
-   return(
-      <ScrollView>
-         <Text>Registro de Paciente</Text>
-         <View>
-            <TextInput
-               label= 'Ingrese DNI'
-               style={{backgroundColor:'white'}}
-               onChangeText = {setIdDocument}
-               value={idDocument}
-            />
+      const {
+         idDocument, setIdDocument,
+         birthDate, setBirthDate,
+         gender, setGender,
+         femaleAditional, SetFemaleAditional,
+         gestationTime, SetGestationTime,
+         patient,
+         isValid,
+      } = usePatientForm();
 
-            <TouchableOpacity onPress={()=> setShowPicker(true)}> 
-               <TextInput
-                  label='Fecha de Nacimiento'
-                  editable={false}
-                  style={{backgroundColor:'white'}}
-                  value = {dayjs(birthDate).format('DD-MMMM-YYYY')}
+      const handleDateChange = (event: any, selectedDate?: Date) => {
+         // En Android llega event.type: 'set' | 'dismissed'
+         if (event?.type === 'dismissed') {
+         setShowPicker(false);
+         return;
+         }
+         if (selectedDate) {
+         setBirthDate(dayjs(selectedDate));
+         }
+         // En iOS también cerramos luego de seleccionar
+         setShowPicker(false);
+      };
+
+      return (
+         <ScrollView contentContainerStyle={{ padding: 16 }}>
+            <Text style={{ fontSize: 20, fontWeight: '600', marginBottom: 12 }}>
+            Registro de Paciente
+            </Text>
+
+            <View style={{ gap: 16 }}>
+            <View>
+               <Text>Ingrese DNI</Text>
+               <TextField
+                  onChangeText={setIdDocument}
+                  value={idDocument}
+                  keyboardType="number-pad"
+                  maxLength={8}
                />
-            </TouchableOpacity>
+            </View>
 
-            {showPicker && (
-               <DateTimePicker
-               mode= 'date'
-               display='compact'
-               value={birthDate.toDate()}   
-               onChange={(e, selectDate)=>{
-                  selectDate && setBirthDate(dayjs(selectDate))
-                  setShowPicker(false)
-               }}   
-            />
-            )}
-            <Text>Seleccione Genero</Text>
-            <RadioButton.Group onValueChange={(v)=>{
-               if(v === 'M' ||v === 'F') setGender(v)
-            }} value = {gender}>
-               <RadioButton.Item label='Masculino' value='M'/>
-               <RadioButton.Item label='Femenino' value='F'/>
-            </RadioButton.Group>
+            <View>
+               <Text>Fecha de nacimiento</Text>
+               <TouchableOpacity onPress={() => setShowPicker(true)}>
+                  <TextField
+                     editable={false}
+                     value={birthDate ? dayjs(birthDate).format('DD-MMMM-YYYY') : ''}
+                     pointerEvents="none"
+                  />
+               </TouchableOpacity>
 
-            {gender === 'F' && (
-               <View>
-                  <Text>Por favor especifique</Text>                  
-                  <RadioButton.Group onValueChange={(v)=>{
-                     if(v === 'G'||v==='P')   SetFemaleAditional(v)
-                     else if (v === '') SetFemaleAditional(null)
-                  }} value = {femaleAditional || ''}>
-                     <RadioButton.Item label='Sin Adicional' value=''/>
-                     <RadioButton.Item label='Gestante' value='G'/>
-                     <RadioButton.Item label='Puerpera' value='P'/>
-                  </RadioButton.Group> 
-               </View>
-            )}
-
-            {femaleAditional === 'G' && (
-               <View>
-                  <Text>Tiempo de Gestacion</Text>                  
-                  <RadioButton.Group onValueChange={(v)=>{
-                     if(v ==='1'||v==='2' || v==='3') SetGestationTime(v)
-                  }} value = {gestationTime || '1'}>
-                     <RadioButton.Item label='1er Trimestre' value='1'/>
-                     <RadioButton.Item label='2do Trimestre' value='2'/>
-                     <RadioButton.Item label='3er Trimestre' value='3'/>
-                  </RadioButton.Group> 
-               </View>
-            )}
-
-            <Button mode='contained-tonal' onPress={()=>{
-               console.log(patient)  
-               if(!isValid()) return 
-
-               // savig patient globally with Zustand
-               usePatientStore.getState().setPatient(patient)
-               //Go to diagnostic screen
-               router.push('/(tabs)/(diagnostic)/diagnostic')
-
+               {showPicker &&
+                  <DateTimePicker
+                     mode="date"
+                     display={Platform.OS === 'ios' ? 'compact' : 'calendar'}
+                     value={birthDate?.toDate?.() ?? new Date()}
+                     maximumDate={new Date()}
+                     onChange={handleDateChange}
+                  />
                }
-            }>
-               Registrar
-            </Button>
+            </View>
 
-         </View>
-      </ScrollView>
-   )
-}
+            <View>
+               <Text>Seleccione Género</Text>
+               <RadioGroup
+                  onValueChange={(v: string) => {
+                  if (v === 'F') setGender(v);
+                  if (v === 'M') {
+                     setGender(v);
+                     SetFemaleAditional(null);
+                  }
+                  }}
+                  initialValue={gender}
+               >
+                  <RadioButton label="Masculino" value="M" />
+                  <RadioButton label="Femenino" value="F" />
+               </RadioGroup>
+            </View>
+
+            
+            <View style={gender === 'F' ? {} : { display: 'none' }}>
+               <Text>Por favor especifique</Text>
+               <RadioGroup
+                  onValueChange={(v: string) => {
+                     if (v === 'G' || v === 'P') SetFemaleAditional(v);
+                     else if (v === '') SetFemaleAditional(null);
+                  }}
+                  initialValue={femaleAditional || ''}
+               >
+                  <RadioButton label="Sin Adicional" value="" />
+                  <RadioButton label="Gestante" value="G" />
+                  <RadioButton label="Puerpera" value="P" />
+               </RadioGroup>
+            </View>
+            
+
+            <View style={femaleAditional === 'G' ? {} : { display: 'none' }} >
+               <Text>Tiempo de Gestación</Text>
+               <RadioGroup
+                  onValueChange={(v: string) => {
+                     if (v === '1' || v === '2' || v === '3') SetGestationTime(v);
+                  }}
+                  initialValue={gestationTime || '1'}
+               >
+                  <RadioButton label="1er Trimestre" value="1" />
+                  <RadioButton label="2do Trimestre" value="2" />
+                  <RadioButton label="3er Trimestre" value="3" />
+               </RadioGroup>
+            </View>
+
+            <Button
+               label="Registrar"
+               disabled={!isValid()}
+               onPress={() => {
+                  if (!isValid()) return;
+                  usePatientStore.getState().setPatient(patient);
+                  router.push('/(tabs)/(diagnostic)/diagnostic');
+               }}
+            />
+            </View>
+         </ScrollView>
+      );
+   }
