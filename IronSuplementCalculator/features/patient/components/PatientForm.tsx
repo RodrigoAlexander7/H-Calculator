@@ -34,7 +34,7 @@ import { usePatientStore } from '../store/patientStore';
          if (selectedDate) {
          setBirthDate(dayjs(selectedDate));
          }
-         // En iOS también cerramos luego de seleccionar
+         // En iOS tambien cerramos luego de seleccionar
          setShowPicker(false);
       };
 

@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { Button, Picker, TextField } from 'react-native-ui-lib';
 
-
 export function LocationPicker() {
 
    const {
