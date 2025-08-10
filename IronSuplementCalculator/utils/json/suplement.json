@@ -1,0 +1,19 @@
+[
+   {
+      "idSuplement" : "1",
+      "name" : "Complejo Polimaltosado Ferrico",
+      "type" : "complejo polimaltosado",
+      "presentation" : "drops",
+      "notes" : "no notes",
+      "elementalIron" : 50,
+      "content": 20, 
+      "dose" : [
+         {
+            "from_age": 0,
+            "to_age": 1825,
+            "doseAmount" : 3
+         }
+      ]
+   }
+
+]
