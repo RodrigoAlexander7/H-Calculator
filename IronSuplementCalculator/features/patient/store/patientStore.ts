@@ -1,4 +1,4 @@
-import { Location } from '@/location/dto/location.dto'
+import { Location } from '@/features/location/dto/location.dto'
 import dayjs from 'dayjs'
 import { create } from 'zustand'
 import { Patient, patientSchema } from '../dto/patient.dto'

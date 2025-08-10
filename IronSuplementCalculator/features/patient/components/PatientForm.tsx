@@ -1,4 +1,4 @@
-import { usePatientForm } from '@/patient/hooks/usePatientForm';
+import { usePatientForm } from '@/features/patient/hooks/usePatientForm';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
