@@ -1,4 +1,4 @@
-import { Patient } from '@/patient/dto/patient.dto';
+import { Patient } from '@/features/patient/dto/patient.dto';
 import dayjs from 'dayjs';
 
 const WEEK : number = 7

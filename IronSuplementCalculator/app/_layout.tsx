@@ -1,18 +1,20 @@
 import { Stack } from "expo-router";
-import 'react-native-gesture-handler';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useColorScheme } from "react-native";
 
 export default function RootLayout(){
+   const colorScheme = useColorScheme();
+   const backgroundColor = colorScheme === 'dark'? '#000000' : '#eae9e9ff'
+
    return(
-       <GestureHandlerRootView style={{ flex: 1 }}>
-         <SafeAreaProvider>
-            <Stack screenOptions={{headerShown:false}}>
-               <Stack.Screen name = "(tabs)"/>
-            </Stack>
-         </SafeAreaProvider>
+      <Stack 
+         screenOptions={{
+            headerShown:false,
+            contentStyle:{
+               backgroundColor:backgroundColor,
+            }
 
-       </GestureHandlerRootView>
-
+         }}>
+         <Stack.Screen name = "(tabs)"/>
+      </Stack>
    )
 }

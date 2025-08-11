@@ -1,9 +1,4 @@
-/*
-UNUSED COMPONENT TO AVOID ERRORS WITH INTEGRATION
-- After use the automatic locaition button (that works) the app cause
-   error when tried to use a Text Input
-
-
+// Unused Component but it work 100% fine :)
 import * as Location from 'expo-location';
 import { useState } from 'react';
 import { View } from 'react-native';
@@ -28,18 +23,17 @@ export function AutomaticLocation(){
 
    return(
       <View>
-         <Button 
+         <Button label = 'Localizacion Automatica'
          onPress={
             ()=> {
                getCurrentLocation()
                console.log(JSON.stringify(deviceLocation))
             }
-         }>
-            Ubicacion Automatica
-         </Button>
+         }
+
+         />
       </View>
    )
    
 }
 
-*/

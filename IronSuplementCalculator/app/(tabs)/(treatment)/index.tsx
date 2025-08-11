@@ -7,8 +7,8 @@ export default function CalculatorScree() {
       <View>
          <Text>Entry Point Screen</Text>
          <Button
-            title = 'go to calculator screen'
-            onPress = {()=> route.navigate('/calculator')}
+            title = 'go to main screen'
+            onPress = {()=> route.navigate('/(tabs)/(register)/register')}
          />
       </View>
    )

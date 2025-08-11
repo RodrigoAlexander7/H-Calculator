@@ -1,13 +1,13 @@
-import { Location } from '@/location/dto/location.dto'
+import { Location } from '@/features/location/dto/location.dto'
 import dayjs from 'dayjs'
 import { create } from 'zustand'
 import { Patient, patientSchema } from '../dto/patient.dto'
 
 const initialPatientData:Patient = {
-   name: 'Not asigned name',
-   lastname: 'Not asigned lastname',
+   idDocument: 'Not asigned name',
    birthDate: dayjs().toISOString(),
    gender: 'M',
+   weight: 0,
    femaleState: null,
    gestationTime: null,
    hbObserved: 0,
@@ -34,6 +34,7 @@ type PatientStore = {
 export const usePatientStore = create<PatientStore>((set, get)=> ({
    patient: initialPatientData,
    setPatient: (patientDto:Patient) => set({patient:patientDto}),
+   // function to only edit the location
    setPatientLocation: (patientLocation: Location)=> {
       set(prev => ({
          patient:{

@@ -1,11 +1,10 @@
-import { useLocationData } from '@/location/hooks/useLocationData';
-import { usePatientStore } from '@/patient/store/patientStore';
+import { useLocationData } from '@/features/location/hooks/useLocationData';
+import { usePatientStore } from '@/features/patient/store/patientStore';
 import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
 import departments from '@/utils/json/departments.json';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { Button, Picker, TextField } from 'react-native-ui-lib';
-
 
 export function LocationPicker() {
 
@@ -22,8 +21,8 @@ export function LocationPicker() {
    
    const [hb,setHb] = useState<string>('')
 
-   // global patient data
-   const { patient, setPatientLocation } = usePatientStore()
+   // global patient data -> we import just the methods or const that we want to use
+   const { patient,setPatientLocation  } = usePatientStore()
    
    return(
       <View >
@@ -91,6 +90,8 @@ export function LocationPicker() {
             <Text>Calcular diagnostico</Text>   
             <Button label ='Registrar'
                onPress = {()=>{
+                  setPatientLocation(location);
+                  console.log(location)
                   console.log(location.adjustHB)
                   const data = getPatientData(patient)
                   console.log(`print data ${JSON.stringify(data)}\n`)
@@ -103,7 +104,7 @@ export function LocationPicker() {
                      hb,
                      location.adjustHB
                   ))
-                  setPatientLocation(location);
+                  
                   console.log(patient)
                }}
             />

@@ -1,5 +1,5 @@
+import { locationSchema } from '@/features/location/dto/location.dto';
 import { z } from 'zod';
-import { locationSchema } from '../../location/dto/location.dto';
 
 const genderSchema =z.enum(['M','F'],'gender are just M or F');
 const femaleStateSchema = z.enum(['G','P']).nullable();
@@ -12,9 +12,10 @@ export const patientSchema = z.object({
    femaleState : femaleStateSchema.optional().nullable(),
    gestationTime : gestationTimeSchema.optional().nullable(),
 
-   hbObserved: z.number(),
-   hbFixed: z.number(),
-   diagnostic: z.string(),
+   weight: z.number().optional(),
+   hbObserved: z.number().optional(),
+   hbFixed: z.number().optional(),
+   diagnostic: z.string().optional(),
    location : locationSchema
 
 })

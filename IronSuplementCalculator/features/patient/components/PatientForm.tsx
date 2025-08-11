@@ -1,4 +1,4 @@
-import { usePatientForm } from '@/patient/hooks/usePatientForm';
+import { usePatientForm } from '@/features/patient/hooks/usePatientForm';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
@@ -12,13 +12,15 @@ import { usePatientStore } from '../store/patientStore';
 
    export function PatientForm() {
       const [showPicker, setShowPicker] = useState<boolean>(false);
+      const [auxWeight, setAuxWeight] = useState<string>('');
 
       const {
          idDocument, setIdDocument,
          birthDate, setBirthDate,
          gender, setGender,
-         femaleAditional, SetFemaleAditional,
-         gestationTime, SetGestationTime,
+         weight, setWeight,
+         femaleAditional, setFemaleAditional,
+         gestationTime, setGestationTime,
          patient,
          isValid,
       } = usePatientForm();
@@ -32,7 +34,7 @@ import { usePatientStore } from '../store/patientStore';
          if (selectedDate) {
          setBirthDate(dayjs(selectedDate));
          }
-         // En iOS también cerramos luego de seleccionar
+         // En iOS tambien cerramos luego de seleccionar
          setShowPicker(false);
       };
 
@@ -51,6 +53,15 @@ import { usePatientStore } from '../store/patientStore';
                   keyboardType="number-pad"
                   maxLength={8}
                />
+
+               <Text>Peso del paciente</Text>
+               <TextField
+                  onChangeText = {setAuxWeight}
+                  value={auxWeight}
+                  keyboardType="number-pad"
+               />
+
+
             </View>
 
             <View>
@@ -63,6 +74,7 @@ import { usePatientStore } from '../store/patientStore';
                   />
                </TouchableOpacity>
 
+         
                {showPicker &&
                   <DateTimePicker
                      mode="date"
@@ -81,7 +93,7 @@ import { usePatientStore } from '../store/patientStore';
                   if (v === 'F') setGender(v);
                   if (v === 'M') {
                      setGender(v);
-                     SetFemaleAditional(null);
+                     setFemaleAditional(null);
                   }
                   }}
                   initialValue={gender}
@@ -96,8 +108,8 @@ import { usePatientStore } from '../store/patientStore';
                <Text>Por favor especifique</Text>
                <RadioGroup
                   onValueChange={(v: string) => {
-                     if (v === 'G' || v === 'P') SetFemaleAditional(v);
-                     else if (v === '') SetFemaleAditional(null);
+                     if (v === 'G' || v === 'P') setFemaleAditional(v);
+                     else if (v === '') setFemaleAditional(null);
                   }}
                   initialValue={femaleAditional || ''}
                >
@@ -112,7 +124,7 @@ import { usePatientStore } from '../store/patientStore';
                <Text>Tiempo de Gestación</Text>
                <RadioGroup
                   onValueChange={(v: string) => {
-                     if (v === '1' || v === '2' || v === '3') SetGestationTime(v);
+                     if (v === '1' || v === '2' || v === '3') setGestationTime(v);
                   }}
                   initialValue={gestationTime || '1'}
                >
@@ -127,6 +139,7 @@ import { usePatientStore } from '../store/patientStore';
                disabled={!isValid()}
                onPress={() => {
                   if (!isValid()) return;
+                  setWeight(Number(auxWeight))
                   usePatientStore.getState().setPatient(patient);
                   router.push('/(tabs)/(diagnostic)/diagnostic');
                }}
