@@ -14,7 +14,7 @@ export function LocationPicker() {
       departmentItems,
       provinceItems,
       districtItems,
-      townItems
+      townItems,
    } = useLocationData()
 
    const [diagnosis ,setDiagnosis] = useState<string|undefined>('')
@@ -24,6 +24,20 @@ export function LocationPicker() {
    // global patient data -> we import just the methods or const that we want to use
    const { patient,setPatientLocation  } = usePatientStore()
    
+   const handleSubmit = ()=>{
+      setPatientLocation(location)
+      const data = getPatientData(patient)
+      setDiagnosis(calculateDiagnostic(
+         data.dateBirth,
+         data.gender || 'M',
+         data.isGestant,
+         data.isPuerper,
+         data.gestationTime || '0',
+         hb,
+         location.adjustHB
+      ))
+   } 
+
    return(
       <View >
          <View>
@@ -79,24 +93,7 @@ export function LocationPicker() {
 
             <Text>Calcular diagnostico</Text>   
             <Button label ='Registrar'
-               onPress = {()=>{
-                  setPatientLocation(location);
-                  console.log(location)
-                  console.log(location.adjustHB)
-                  const data = getPatientData(patient)
-                  console.log(`print data ${JSON.stringify(data)}\n`)
-                  setDiagnosis(calculateDiagnostic(
-                     data.dateBirth,
-                     data.gender || 'M',
-                     data.isGestant,
-                     data.isPuerper,
-                     data.gestationTime || '0',
-                     hb,
-                     location.adjustHB
-                  ))
-                  
-                  console.log(patient)
-               }}
+               onPress = {handleSubmit}
             />
          </View>
          <Text>{diagnosis} </Text>   

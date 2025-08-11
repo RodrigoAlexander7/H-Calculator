@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import { create } from 'zustand'
 import { Patient, patientSchema } from '../dto/patient.dto'
 
+// **** DIAGNOSTIC MUST BE A COMPLETE OBJECT TO SAVE THE DATE AND THE DIAGNOSTIC ON THESE DATE
 const initialPatientData:Patient = {
    idDocument: 'Not asigned name',
    birthDate: dayjs().toISOString(),
