@@ -44,25 +44,25 @@ import { usePatientStore } from '../store/patientStore';
             Registro de Paciente
             </Text>
 
-            <View style={{ gap: 16 }}>
             <View>
-               <Text>Ingrese DNI</Text>
-               <TextField
-                  onChangeText={setIdDocument}
-                  value={idDocument}
-                  keyboardType="number-pad"
-                  maxLength={8}
-               />
+               <View>
+                  <Text>Ingrese DNI</Text>
+                  <TextField
+                     onChangeText={setIdDocument}
+                     value={idDocument}
+                     keyboardType="number-pad"
+                     maxLength={8}
+                  />
 
-               <Text>Peso del paciente</Text>
-               <TextField
-                  onChangeText = {setAuxWeight}
-                  value={auxWeight}
-                  keyboardType="number-pad"
-               />
+                  <Text>Peso del paciente</Text>
+                  <TextField
+                     onChangeText = {setAuxWeight}
+                     value={auxWeight}
+                     keyboardType="number-pad"
+                  />
 
 
-            </View>
+               </View>
 
             <View>
                <Text>Fecha de nacimiento</Text>
@@ -89,14 +89,14 @@ import { usePatientStore } from '../store/patientStore';
             <View>
                <Text>Seleccione Género</Text>
                <RadioGroup
+                  initialValue = {gender}
                   onValueChange={(v: string) => {
-                  if (v === 'F') setGender(v);
-                  if (v === 'M') {
-                     setGender(v);
-                     setFemaleAditional(null);
-                  }
+                     if (v === 'F') setGender(v);
+                     if (v === 'M') {
+                        setGender(v);
+                        setFemaleAditional(null);
+                     }
                   }}
-                  initialValue={gender}
                >
                   <RadioButton label="Masculino" value="M" />
                   <RadioButton label="Femenino" value="F" />
