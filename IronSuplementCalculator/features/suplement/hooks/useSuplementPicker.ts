@@ -14,6 +14,7 @@ export const useSuplementPicker = () => {
     const [suplement, setSuplement] = useState<Suplement | null>(null);
     const {suplementStore, setSuplementStore, clear} = useSuplementStore();
 
+    // Use Effect to update the store (zustand) when id change
     useEffect(() => {
         if (idSuplement) {
          // finding the Suplement object with this id
