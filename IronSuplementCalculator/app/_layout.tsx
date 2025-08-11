@@ -1,20 +1,17 @@
+import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { Stack } from "expo-router";
 import { useColorScheme } from "react-native";
 
 export default function RootLayout(){
    const colorScheme = useColorScheme();
-   const backgroundColor = colorScheme === 'dark'? '#000000' : '#eae9e9ff'
+   const backgroundTheme = colorScheme === 'dark'? DarkTheme : DefaultTheme
 
    return(
-      <Stack 
-         screenOptions={{
-            headerShown:false,
-            contentStyle:{
-               backgroundColor:backgroundColor,
-            }
+      <ThemeProvider value={backgroundTheme}>
+         <Stack>
+            <Stack.Screen name = "(tabs)"/>
+         </Stack>
+      </ThemeProvider>
 
-         }}>
-         <Stack.Screen name = "(tabs)"/>
-      </Stack>
    )
 }
