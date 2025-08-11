@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 const presentationSchema = z.enum(['drops', 'syrup', 'pill'])
-const doseSchema = z.object({
+export const doseSchema = z.object({
    from_age : z.number(),  // age in days
    to_age : z.number(),    // age in days
    doseAmount: z.number()  // amount in ml/(kg or day)
