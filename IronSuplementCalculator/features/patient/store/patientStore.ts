@@ -8,7 +8,7 @@ const initialPatientData:Patient = {
    birthDate: dayjs().toISOString(),
    gender: 'M',
    weight: 0,
-   femaleState: null,
+   femaleAditional: null,
    gestationTime: null,
    hbObserved: 0,
    hbFixed: 0,
