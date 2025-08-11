@@ -7,7 +7,7 @@ import { getDose } from "../services/suplement.service";
 import { useSuplementStore } from "../store/suplementStore";
 
 export const TreatmentButton = ()=>{
-   const {suplement} = useSuplementStore();
+   const {suplementStore} = useSuplementStore();
    const {patient} = usePatientStore();
    const ageDays : number = Number(dayjs().diff(dayjs(patient.birthDate),'day'))
    const [doseInfo,setDoseInfo] = useState<string>('')
@@ -17,7 +17,7 @@ export const TreatmentButton = ()=>{
          <Button
             label = 'Calcular tratamiento'
             onPress = {()=>{
-               setDoseInfo(String(getDose(suplement,ageDays,patient.weight||0,true)))
+               setDoseInfo(String(getDose(suplementStore,ageDays,patient.weight||0,true)))
             }}
          />
          {doseInfo && 

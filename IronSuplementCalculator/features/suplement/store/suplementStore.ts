@@ -19,13 +19,13 @@ const initialSuplementData: Suplement = {
 };
 
 type SuplementStore = {
-   suplement: Suplement;
-   setSuplement: (suplement:Suplement)=>void;
+   suplementStore: Suplement; // the suplement object
+   setSuplementStore: (suplement:Suplement)=>void; // function to set a suplement in zustand memory
    clear:()=>void;
 }
 
 export const useSuplementStore = create<SuplementStore>((set,get)=>({
-   suplement: initialSuplementData,
-   setSuplement: (suplementDto:Suplement) => set({suplement:suplementDto}),
-   clear: ()=> set({suplement: initialSuplementData})
+   suplementStore: initialSuplementData,
+   setSuplementStore: (suplementDto:Suplement) => set({suplementStore:suplementDto}),
+   clear: ()=> set({suplementStore: initialSuplementData})
 }))

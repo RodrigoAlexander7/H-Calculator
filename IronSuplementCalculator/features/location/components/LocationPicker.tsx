@@ -32,9 +32,6 @@ export function LocationPicker() {
                onChangeText={setHb}
                value= {hb}
                keyboardType="number-pad"
-               style={
-                  {backgroundColor: 'white'}
-               }
             />
 
          </View>
@@ -44,7 +41,6 @@ export function LocationPicker() {
                showSearch
                preset='outline'
                label='Selecciona Departamento'
-               labelColor= 'black'
                placeholder='Departamento'
                items = {departments}
                value={location.department}
@@ -53,11 +49,9 @@ export function LocationPicker() {
             <Picker
                preset='outline'
                label='Selecciona Provincia'
-               labelColor= 'black'
                placeholder='Provincia'
                editable={location.department !== ''}
                showSearch
-               searchStyle={{color:'black'}}
                items = {provinceItems}
                value={location.province}
                onChange={onLocationChange('province')}
@@ -65,11 +59,9 @@ export function LocationPicker() {
             <Picker
                preset='outline'
                label='Selecciona Distrito'
-               labelColor= 'black'
                placeholder='Distrito'
                editable={location.province !== ''}
                showSearch
-               searchStyle={{color:'black'}}
                items = {districtItems}
                value={location.district}
                onChange={onLocationChange('district')}
@@ -77,11 +69,9 @@ export function LocationPicker() {
             <Picker
                preset='outline'
                label='Selecciona Centro Poblado'
-               labelColor= 'black'
                placeholder='Centro Poblado'
                editable={location.district !== ''}
                showSearch
-               searchStyle={{color:'black'}}
                items = {townItems}
                value={location.town}
                onChange={onLocationChange('town')}

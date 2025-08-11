@@ -2,7 +2,6 @@ import { Text, View } from "react-native";
 import { Picker } from "react-native-ui-lib";
 import { useSuplementPicker } from "../hooks/useSuplementPicker";
 import { getInfoToString } from "../services/suplement.service";
-import { useSuplementStore } from "../store/suplementStore";
 
 export function SuplementPicker(){
    const {
@@ -27,8 +26,6 @@ export function SuplementPicker(){
                onChange={(val)=>{
                   if(typeof val === 'string'){
                      setIdSuplement(val)
-                     useSuplementStore.getState().clear()
-                     if(suplement) useSuplementStore.getState().setSuplement(suplement)
                      console.log(suplement)
                   }  
                }}
