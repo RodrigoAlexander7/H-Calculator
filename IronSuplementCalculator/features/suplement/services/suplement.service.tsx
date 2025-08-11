@@ -4,17 +4,22 @@ import suplement_information from "@/utils/json/suplement_information.json";
 const suplementItems:Suplement[]  = suplementSchema.array().parse(suplement_information);
 
 // is the daily necesary doses to the child -> we recive the patient's weigth, age(in days), if is anemic and the type of product
-export const getDose = (suplementSchema:Suplement, age:number, weight:number , isAnemic: boolean) => {
-   let dose = 0;
-   const ageDose = suplementSchema.dose.find((dose)=>{
+export const getDose = (suplementValue:Suplement, age:number, weight:number , isAnemic: boolean):number => {
+   console.log(JSON.stringify(suplementValue)+'\n'+age+'\n'+weight+'\n' + isAnemic)
+   let doseResult = 0;
+   const ageDoseAmount = suplementValue.dose.find((dose)=>{
       return age > dose.from_age && age <= dose.to_age
    })?.doseAmount // amount in ml per kg or day
 
-   if(isAnemic && ageDose)
-      return dose = weight * ageDose / suplementSchema.elementalIron 
+   console.log(ageDoseAmount + '***********' )
+
+   if(isAnemic && ageDoseAmount)
+      doseResult = weight * ageDoseAmount / suplementValue.elementalIron 
    
-   else if(!isAnemic && ageDose)
-      return dose = weight * 2/3 * ageDose / suplementSchema.elementalIron
+   else if(!isAnemic && ageDoseAmount)
+      doseResult = weight * 2/3 * ageDoseAmount / suplementValue.elementalIron
+   console.log(doseResult)
+   return doseResult
 }
 
 export const getById = (id:string): Suplement|null => { 
