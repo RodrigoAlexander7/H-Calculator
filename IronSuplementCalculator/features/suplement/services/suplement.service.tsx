@@ -7,7 +7,7 @@ const suplementItems:Suplement[]  = suplementSchema.array().parse(suplement_info
 export const getDose = (suplementSchema:Suplement, age:number, weight:number , isAnemic: boolean) => {
    let dose = 0;
    const ageDose = suplementSchema.dose.find((dose)=>{
-      age > dose.from_age && age <= dose.to_age
+      return age > dose.from_age && age <= dose.to_age
    })?.doseAmount // amount in ml per kg or day
 
    if(isAnemic && ageDose)
@@ -40,7 +40,7 @@ export const getInfoToString = (suplement:Suplement): string => {
       `Contenido: ${suplement.content}` + 'ml\n' +
       `Dosis: ${suplement.dose.map((val)=>{
          return(
-            `De: ${val.from_age} - ${val.to_age} años --- ${val.from_age}ml `
+            `De: ${val.from_age} - ${val.to_age} años --> ${val.doseAmount}ml `
          )
       })}` + '\n' 
    )
