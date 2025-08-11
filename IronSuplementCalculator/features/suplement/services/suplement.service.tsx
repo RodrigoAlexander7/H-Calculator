@@ -15,14 +15,10 @@ export const getDose = (suplementSchema:Suplement, age:number, weight:number , i
    
    else if(!isAnemic && ageDose)
       return dose = weight * 2/3 * ageDose / suplementSchema.elementalIron
-   
 }
 
 export const getById = (id:string): Suplement|null => { 
-   suplementItems.find((val) => {
-      if(val.idSuplement === id) return val
-   })
-   return null
+   return suplementItems.find(val => val.idSuplement === id)||null
 }
 
 export const getInfoToString = (suplement:Suplement): string => {
