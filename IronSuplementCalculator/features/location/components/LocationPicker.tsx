@@ -1,5 +1,6 @@
 import { useLocationData } from '@/features/location/hooks/useLocationData';
-import { calculateDiagnostic, getPatientData } from '@/features/patient/services/patient.service';
+import { getPatientInfo } from '@/features/patient/services/patient.service';
+import { calculateDiagnostic, getPatientData } from '@/features/patient/services/patientDiagnostic.service';
 import { usePatientStore } from '@/features/patient/store/patientStore';
 import departments from '@/utils/json/departments.json';
 import { useEffect, useState } from 'react';
@@ -17,7 +18,6 @@ export function LocationPicker() {
       townItems,
    } = useLocationData()
 
-   const [auxDiagnosis ,setAuxDiagnosis] = useState<string|undefined>('')
    
    const [hb,setHb] = useState<string>('')
 
@@ -108,7 +108,8 @@ export function LocationPicker() {
                onPress = {handleSubmit}
             />
          </View>
-         <Text>{patient.diagnostic} </Text>   
+         <Text>{patient.diagnostic + '\n'+
+                getPatientInfo(patient)} </Text>   
       </View>
    )
 }
