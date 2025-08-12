@@ -16,7 +16,6 @@ export const patientSchema = z.object({
    hbObserved: z.number().optional(),
    hbFixed: z.number().optional(),
 
-   // **** DIAGNOSTIC MUST BE A COMPLETE OBJECT TO SAVE THE DATE AND THE DIAGNOSTIC ON THESE DATE
    diagnostic: z.string().optional(),
    location : locationSchema
 

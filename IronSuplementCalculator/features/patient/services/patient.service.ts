@@ -103,6 +103,7 @@ const femaleRules: FemaleRules[] = [
 
 ]   
 
+
 export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestant:boolean,isPuerper:boolean,gestationTime:string, hbStr:string, hbCorrectionStr:string):string|undefined => {
    const ageDays : number = Number(dayjs().diff(dayjs(dateBirthStr),'day'))
    const hbCorrection:number = Number(String(hbCorrectionStr).replace(',','.'))
@@ -146,11 +147,12 @@ export const getPatientData = (patient: Patient) => {
    return {
       dateBirth: patient.birthDate,
       gender: patient.gender,
-      isGestant: patient.femaleState === 'G',
-      isPuerper: patient.femaleState === 'P',
-      gestationTime: patient.femaleState ==='G'? patient.gestationTime : '0'
+      isGestant: patient.femaleAditional === 'G',
+      isPuerper: patient.femaleAditional === 'P',
+      gestationTime: patient.femaleAditional ==='G'? patient.gestationTime : '0'
    }
 }
+
 
 const getResult = (objStats:stats[],hb:number, info:string):string|undefined => {
    for(const caseStats of objStats){

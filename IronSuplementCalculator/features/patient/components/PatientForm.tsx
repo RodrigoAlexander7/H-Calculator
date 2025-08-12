@@ -105,6 +105,7 @@ export function PatientForm() {
                   if (v === 'M') {
                      setGender(v);
                      setFemaleAditional(null);
+                     setGestationTime(null)
                   }
                }}
             >

@@ -9,7 +9,6 @@ export const usePatientForm = ()=>{
    const [femaleAditional, setFemaleAditional] = useState<'G'|'P'|null>(null)
    const [gestationTime, setGestationTime] = useState<'1'|'2'|'3'|null>(null)
    const [weight, setWeight] = useState<number>(0);
-   // **** DIAGNOSTIC MUST BE A COMPLETE OBJECT TO SAVE THE DATE AND THE DIAGNOSTIC ON THESE DATE
    const [diagnostic, setDiagnostic] = useState<string>('')
 
    const patient:Patient = {
