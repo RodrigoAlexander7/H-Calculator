@@ -1,8 +1,9 @@
 import { useLocationData } from '@/features/location/hooks/useLocationData';
+import { getPatientInfo } from '@/features/patient/services/patient.service';
+import { calculateDiagnostic, getPatientData } from '@/features/patient/services/patientDiagnostic.service';
 import { usePatientStore } from '@/features/patient/store/patientStore';
-import { calculateDiagnostic, getPatientData } from '@/utils/diagnostic';
 import departments from '@/utils/json/departments.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { Button, Picker, TextField } from 'react-native-ui-lib';
 
@@ -17,17 +18,20 @@ export function LocationPicker() {
       townItems,
    } = useLocationData()
 
-   const [diagnosis ,setDiagnosis] = useState<string|undefined>('')
    
    const [hb,setHb] = useState<string>('')
 
    // global patient data -> we import just the methods or const that we want to use
-   const { patient,setPatientLocation  } = usePatientStore()
+   const { patient,setPatientLocation,
+      setHbFixed, setHbObserved,
+      setDiagnostic
+     } = usePatientStore()
    
    const handleSubmit = ()=>{
-      setPatientLocation(location)
+      const hbNum = Number(hb);
+      const adjustHBNum = parseFloat(String(location.adjustHB).replace(',', '.')) || 0;
       const data = getPatientData(patient)
-      setDiagnosis(calculateDiagnostic(
+      const diagnosis = (calculateDiagnostic(
          data.dateBirth,
          data.gender || 'M',
          data.isGestant,
@@ -36,7 +40,15 @@ export function LocationPicker() {
          hb,
          location.adjustHB
       ))
+      setPatientLocation(location)
+      setHbFixed(hbNum)
+      setHbObserved(adjustHBNum)
+      setDiagnostic(diagnosis || 'No diagnostiic data')
    } 
+
+   useEffect(()=>{
+      console.log(JSON.stringify(patient))
+   },[patient])
 
    return(
       <View >
@@ -96,7 +108,8 @@ export function LocationPicker() {
                onPress = {handleSubmit}
             />
          </View>
-         <Text>{diagnosis} </Text>   
+         <Text>{patient.diagnostic + '\n'+
+                getPatientInfo(patient)} </Text>   
       </View>
    )
 }

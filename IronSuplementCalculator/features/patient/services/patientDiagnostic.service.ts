@@ -1,6 +1,8 @@
 import { Patient } from '@/features/patient/dto/patient.dto';
 import dayjs from 'dayjs';
 
+
+
 const WEEK : number = 7
 const MONTH : number = 30
 const YEAR : number = 365
@@ -107,56 +109,51 @@ export const calculateDiagnostic = (dateBirthStr:string ,gender:string, isGestan
    const ageDays : number = Number(dayjs().diff(dayjs(dateBirthStr),'day'))
    const hbCorrection:number = Number(String(hbCorrectionStr).replace(',','.'))
    let hb:number = Number(hbStr)
-   hb = hb - hbCorrection
-   let info: string =
-                     `Genero: ${gender === 'M'? 'masculino':'femenino'}` +
-                     `\n Es gestante: ${isGestant? `Si - ${gestationTime} trimestre`:'No'}` +
-                     `\n Es puerpera: ${isPuerper? 'Si':'No'}` +
-                     `\n HB observada: ${hbStr}` +
-                     `\n Factor Correcion por Altura: ${hbCorrection}` +
-                     `\n HB ajustada: ${hb}` 
+   hb = hb - hbCorrection 
 
    if (ageDays < 12 * YEAR){
       const gStast = genericRules.find( obj => ageDays < obj.ageMax)?.stats 
-      if(gStast)  return getResult(gStast,hb,info)   
+      if(gStast)  return getResult(gStast,hb)   
    }
    
    else if(gender === 'M'){
       const mStats = maleRules.find(obj => ageDays < obj.ageMax)?.stats
-      if(mStats) return getResult(mStats,hb,info)
+      if(mStats) return getResult(mStats,hb)
    }
 
    else if(gender === 'F'){
       if (isPuerper){
          const fStats = femaleRules.find(obj => obj.isPuerper)?.stats
-         if (fStats) return getResult(fStats,hb,info);  
+         if (fStats) return getResult(fStats,hb);  
       }
       else if (isGestant){
          const fStats = femaleRules.find(obj => obj.isGestant && String(obj.gestationTime) === gestationTime)?.stats
-         if (fStats) return getResult(fStats,hb,info);
+         if (fStats) return getResult(fStats,hb);
       }
       else {
          const fStats = femaleRules.find(obj => obj.isGestant === false && obj.ageMax !== undefined && ageDays < obj.ageMax)?.stats
-         if (fStats) return getResult(fStats,hb,info)
+         if (fStats) return getResult(fStats,hb)
       }
    }
    return 'Shomethig happends bro, hi'
 }
+
 export const getPatientData = (patient: Patient) => {
    return {
       dateBirth: patient.birthDate,
       gender: patient.gender,
-      isGestant: patient.femaleState === 'G',
-      isPuerper: patient.femaleState === 'P',
-      gestationTime: patient.femaleState ==='G'? patient.gestationTime : '0'
+      isGestant: patient.femaleAditional === 'G',
+      isPuerper: patient.femaleAditional === 'P',
+      gestationTime: patient.femaleAditional ==='G'? patient.gestationTime : '0'
    }
 }
 
-const getResult = (objStats:stats[],hb:number, info:string):string|undefined => {
+
+const getResult = (objStats:stats[],hb:number):string|undefined => {
    for(const caseStats of objStats){
       if(hb <= caseStats.anemiaLimit){
-         return caseStats.result + `\n ${info}`
+         return caseStats.result
       }
    }
-   return 'Paciente Sano:' + '\n' + info
+   return 'Paciente Sano' 
 }

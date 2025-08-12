@@ -7,7 +7,6 @@ export default function ProfileLayout() {
   return (
     <Stack screenOptions={stylesScreenOptions}>
       <Stack.Screen name="home" />
-      <Stack.Screen name="details" />
     </Stack>
   );
 }

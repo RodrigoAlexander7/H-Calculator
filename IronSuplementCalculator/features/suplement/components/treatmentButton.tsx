@@ -10,19 +10,25 @@ export const TreatmentButton = ()=>{
    const {suplementStore} = useSuplementStore();
    const {patient} = usePatientStore();
    const ageDays : number = Number(dayjs().diff(dayjs(patient.birthDate),'day'))
-   const [doseInfo,setDoseInfo] = useState<string>('')
+   const [doseNumber,setDoseNumber] = useState<number>(0)
 
    return(
       <View>
          <Button
             label = 'Calcular tratamiento'
             onPress = {()=>{
-               setDoseInfo(String(getDose(suplementStore,ageDays,patient.weight||0,true)))
+               setDoseNumber(getDose(suplementStore,ageDays,patient.weight||0,true))
             }}
          />
-         {doseInfo && 
+         {doseNumber !==0 && 
             <Text>
-               {doseInfo}
+               {'Se recomienda diariamente: \n'+ doseNumber +'ml del suplemento\n'+
+               'EQUIVALENTES:\n'+
+               doseNumber * 20 + 'gotas\n'+
+               doseNumber / 5 + 'cucharaditas\n'+
+               doseNumber / 15 + 'cucharas'}
+
+
             </Text>
          }
       </View>

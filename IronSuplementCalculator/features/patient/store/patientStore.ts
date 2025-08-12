@@ -3,7 +3,6 @@ import dayjs from 'dayjs'
 import { create } from 'zustand'
 import { Patient, patientSchema } from '../dto/patient.dto'
 
-// **** DIAGNOSTIC MUST BE A COMPLETE OBJECT TO SAVE THE DATE AND THE DIAGNOSTIC ON THESE DATE
 const initialPatientData:Patient = {
    idDocument: 'Not asigned name',
    birthDate: dayjs().toISOString(),
@@ -27,6 +26,9 @@ type PatientStore = {
    patient: Patient;
    setPatient: (dataDto:Patient)=> void;
    setPatientLocation: (patientLocation:Location)=> void;
+   setHbObserved: (hb:number)=> void;
+   setHbFixed: (hbFixed:number) => void;
+   setDiagnostic: (patientDiagnostic: string) => void; 
    isValid: ()=> boolean;
    clear: ()=> void;
 }
@@ -35,6 +37,31 @@ type PatientStore = {
 export const usePatientStore = create<PatientStore>((set, get)=> ({
    patient: initialPatientData,
    setPatient: (patientDto:Patient) => set({patient:patientDto}),
+   setHbObserved:(hb:number) => {
+      set(prev => ({
+         patient: {
+            ...prev.patient,
+            hbObserved:hb
+         }
+      }))
+   },
+   setHbFixed:(hb:number) => {
+      set(prev => ({
+         patient: {
+            ...prev.patient,
+            hbFixed:hb
+         }
+      }))
+   },
+   setDiagnostic:(patientDiagnostic:string) => {
+      set(prev => ({
+         patient:{
+            ...prev.patient,
+            diagnostic: patientDiagnostic
+         }
+      }))
+   },
+
    // function to only edit the location
    setPatientLocation: (patientLocation: Location)=> {
       set(prev => ({
