@@ -19,6 +19,7 @@ export function SuplementPicker(){
                label = 'Seleccionar tipo de suplementacion'
                labelColor='black'
                placeholder= 'Seleccionar Sulfato Ferroso'
+               spellCheck={false}
                showSearch 
                searchStyle={{color:'black'}}
                items = {suplementItems}
