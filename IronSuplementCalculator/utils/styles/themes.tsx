@@ -2,7 +2,7 @@ import { Colors } from 'react-native-ui-lib';
 
 Colors.loadSchemes({
   light: {
-    screenBG: '#F8F9FA',
+    screenBG: '#ffffffff',
     textColor: '#212529',
     primary: '#2667FF',
     secondary: '#5C8BFF',
@@ -13,8 +13,8 @@ Colors.loadSchemes({
   },
   dark: {
     screenBG: '#121212',
-    textColor: '#E9ECEF',
-    primary: '#5C8BFF',
+    textColor: '#ffffffff',
+    primary: '#226CEB',
     secondary: '#2667FF',
     accent: '#20C997',
     error: '#F17C7C',

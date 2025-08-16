@@ -5,9 +5,17 @@ import { Colors } from 'react-native-ui-lib';
 import "../utils/styles/styles";
 import "../utils/styles/themes";
 
+const CustomLight = {
+   ...DefaultTheme,
+   colors: {
+      ...DefaultTheme.colors,
+      background:'#ffffff'
+   }
+}
+
 export default function RootLayout(){
    const colorScheme = useColorScheme();
-   const backgroundTheme = colorScheme === 'dark'? DarkTheme : DefaultTheme
+   const backgroundTheme = colorScheme === 'dark'? DarkTheme : CustomLight
    Colors.setScheme(useColorScheme() === 'dark' ? 'dark' : 'light');
 
    return(
