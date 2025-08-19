@@ -22,12 +22,11 @@ export const TreatmentButton = ()=>{
          />
          {doseNumber !==0 && 
             <Text>
-               {'Se recomienda diariamente: \n'+ doseNumber +'ml del suplemento\n'+
+               {'Se recomienda diariamente: \n'+ doseNumber.toFixed(1) +'ml del suplemento\n'+
                'EQUIVALENTES:\n'+
-               doseNumber * 20 + 'gotas\n'+
-               doseNumber / 5 + 'cucharaditas\n'+
-               doseNumber / 15 + 'cucharas'}
-
+               `${(doseNumber * 20).toFixed(1)} gotas\n\n`+
+               'Dosis Mensual\n' + (doseNumber*30/suplementStore.content).toFixed(1) + ' frascos' 
+               }
 
             </Text>
          }

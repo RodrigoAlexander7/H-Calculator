@@ -1,19 +1,66 @@
 [
    {
-      "idSuplement" : "1",
-      "name" : "Complejo Polimaltosado Ferrico",
-      "type" : "complejo polimaltosado",
-      "presentation" : "drops",
-      "notes" : "no notes",
-      "elementalIron" : 50,
-      "content": 20, 
-      "dose" : [
+      "idSuplement": "1",
+      "name": "Sulfato Ferroso 75mg/5mL",
+      "type": "sulfato ferroso",
+      "presentation": "syrup",
+      "notes": "1 ml = 3 mg hierro elemental",
+      "elementalIron": 3,
+      "content": 180,
+      "dose": [
          {
-            "from_age": 0,
-            "to_age": 1825,
-            "doseAmount" : 3
+            "from_age": 180,
+            "to_age": 4015,
+            "doseAmount": 3
+         }
+      ]
+   },
+   {
+      "idSuplement": "2",
+      "name": "Fer-In-Sol",
+      "type": "Sulfato Ferroso",
+      "presentation": "drops",
+      "notes": "Contenido equivalente a 400 gotas",
+      "elementalIron": 1.25,
+      "content": 20,
+      "dose": [
+         {
+            "from_age": 180,
+            "to_age": 1095,
+            "doseAmount": 3
+         }
+      ]
+   },
+   {
+      "idSuplement": "3",
+      "name": "Hierro polimaltosa",
+      "type": "Complejo Polimaltosado",
+      "presentation": "drops",
+      "notes": "20 ml equivalente a 400 gotas",
+      "elementalIron": 2.5,
+      "content": 20,
+      "dose": [
+         {
+            "from_age": 180,
+            "to_age": 1095,
+            "doseAmount": 3
+         }
+      ]
+   },
+   {
+      "idSuplement": "4",
+      "name": "Ferrimax   ",
+      "type": "complejo polimaltosado ferrico",
+      "presentation": "drops",
+      "notes": "30 ml equivalente a 600 gotas",
+      "elementalIron": 2.5,
+      "content": 30,
+      "dose": [
+         {
+            "from_age": 180,
+            "to_age": 1095,
+            "doseAmount": 3
          }
       ]
    }
-
 ]

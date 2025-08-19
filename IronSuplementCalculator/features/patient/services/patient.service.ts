@@ -31,8 +31,13 @@ export const getPatientInfo = (patient: Patient) => {
    Condición adicional: ${adicional}
    Tiempo de gestación: ${trimestre}
    Peso: ${patient.weight ?? "N/A"} kg
-   Hb Observada: ${patient.hbObserved ?? "N/A"} g/dL
-   Hb Fijada: ${patient.hbFixed ?? "N/A"} g/dL
+   Factor de correccion: ${patient.hbObserved ?? "N/A"} g/dL  
+   Hb Observada:  ${patient.hbFixed ?? "N/A"} g/dL
+   Hb Corregida: ${
+  patient?.hbObserved != null && patient?.hbFixed != null
+    ?  patient.hbFixed - patient.hbObserved
+    : "N/A"
+} g/dL
    Diagnóstico: ${patient.diagnostic ?? "N/A"}
 `.trim();
 };

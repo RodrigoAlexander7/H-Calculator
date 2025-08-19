@@ -27,22 +27,41 @@ export const getById = (id:string): Suplement|null => {
 }
 
 export const getInfoToString = (suplement:Suplement): string => {
-   let presentation
-   presentation = presentation === 'drops'? 'Gotas':''
-   presentation = presentation === 'syrup'? 'Jarabe':''
-   presentation = presentation === 'pill'? 'Pastillas':''
+   let presentation = '';
+   if (suplement.presentation === 'drops') {
+   presentation = 'Gotas';
+   } else if (suplement.presentation === 'syrup') {
+   presentation = 'Jarabe';
+   } else if (suplement.presentation === 'pill') {
+   presentation = 'Pastillas';
+   }
+
+   
    return(
-      `ID de Suplemento: ${suplement.idSuplement}` + '\n' +
-      `Nombre Comercial: ${suplement.name}` + '\n' +
       `Tipo: ${suplement.type}` + '\n' +
+      `Nombre de Producto: ${suplement.name}` + '\n' +
+      //`ID de Suplemento: ${suplement.idSuplement}` + '\n' +
       `Presentacion: ${presentation}` + '\n' +
-      `Notas: ${suplement.notes}` + '\n' +
-      `Hierro Elemental: ${suplement.elementalIron}` + '\n' +
-      `Contenido: ${suplement.content}` + 'ml\n' +
+      `Hierro Elemental: Por cada 01 ml contiene ${suplement.elementalIron} mg`  + '\n' +
+      `Contenido por envase: ${suplement.content}` + 'ml\n' +
+      `Notes: ${suplement.notes}` + '\n' +
       `Dosis: ${suplement.dose.map((val)=>{
          return(
-            `De: ${val.from_age} - ${val.to_age} años --> ${val.doseAmount}ml `
+            `De: ${formatDays(val.from_age)} - ${formatDays(val.to_age)} --> ${val.doseAmount}ml `
          )
       })}` + '\n' 
    )
+}
+
+
+function formatDays(dias: number) {
+  const diasPorAnio = 365;
+  const diasPorMes = 30;
+
+  const anios = Math.floor(dias / diasPorAnio);
+  const meses = Math.floor((dias % diasPorAnio) / diasPorMes);
+
+  const dispAnios = anios>0? `${anios} años`: ''
+  const dispMeses = meses>0? `${meses} meses`: ''
+  return dispAnios + dispMeses
 }
