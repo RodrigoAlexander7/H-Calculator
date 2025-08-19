@@ -44,12 +44,11 @@ npm install
 npx expo start
 ```
 
-Puedes escanear el código QR con la app de Expo Go desde tu teléfono para probar la app.
+### 4. Corre la app en tu telefono
 
-### Alternativamente
-
-También puedes descargar la app directamente desde **Expo EAS** usando el siguiente enlace:
-📲 [Descargar App DosisFe en Expo](https://expo.dev/accounts/rodrygoleu/projects/IronSuplementCalculator/builds/a37bfbd7-ae4a-4485-b29f-338e6d4950da)
+Descarga la app directamente desde **Expo EAS** usando el siguiente enlace:
+📲 [Descargar App DosisFe en Expo](https://expo.dev/accounts/rodrygoleu/projects/IronSuplementCalculator/builds/c1840303-c7f8-493e-bc83-af0b53d09e1b)
+Una vez dentro podras ver el servidor (el que iniciamos localmente con `npm run dev`) selecionalo y tendras la aplicacion corriendo en tu telefono!
 
 ## 🔭 Futuras funcionalidades
 
