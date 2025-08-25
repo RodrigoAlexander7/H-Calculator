@@ -37,10 +37,13 @@ export default function RegisterScreen() {
             />
          </View>
          <Button label="Calcular dosis" size={Button.sizes.large} style={commonButtonStyle} 
-         onPress ={()=> route.navigate('/(tabs)/(register)/register')} />
-         <Button label="Valores Normales de HB" size={Button.sizes.large} style={commonButtonStyle} />
+         onPress ={()=> route.navigate('/register')} />  
+         {/* The navegation works istead of  '/(tabs)/(register)/register')  cause expo ignore the gorups  */}
+         <Button label="Valores Normales de HB" size={Button.sizes.large} style={commonButtonStyle} 
+         onPress ={()=>route.navigate('/normalValues')} />
          <Button label="Ajuste por altura" size={Button.sizes.large} style={commonButtonStyle} />
-         <Button label="Tipo de suplementacion" size={Button.sizes.large} style={commonButtonStyle} />
+         <Button label="Tipo de suplementacion" size={Button.sizes.large} style={commonButtonStyle} 
+         onPress ={()=>route.navigate('/suplementsInfo')} />
       </ScrollView>
    );
 }
