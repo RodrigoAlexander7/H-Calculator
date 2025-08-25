@@ -1,5 +1,5 @@
-import { SuplementPicker } from "@/features/suplement/components/suplementPicker";
-import { TreatmentButton } from "@/features/suplement/components/treatmentButton";
+import { SuplementPicker } from "@/modules/suplement/components/suplementPicker";
+import { TreatmentButton } from "@/modules/suplement/components/treatmentButton";
 import { View } from "react-native";
 
 export default function TreatmentScreen(){

@@ -1,4 +1,4 @@
-import type { Patient } from '@/features/patient/dto/patient.dto'; // ajusta el path
+import type { Patient } from '@/modules/patient/dto/patient.dto'; // ajusta el path
 import dayjs from "dayjs";
 
 export const getPatientInfo = (patient: Patient) => {

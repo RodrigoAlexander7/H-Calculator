@@ -1,4 +1,4 @@
-import { Suplement, suplementSchema } from "@/features/suplement/dto/suplement.dto";
+import { Suplement, suplementSchema } from "@/modules/suplement/dto/suplement.dto";
 import suplement_information from "@/utils/json/suplement_information.json";
 import { useEffect, useState } from "react";
 import { useSuplementStore } from "../store/suplementStore";

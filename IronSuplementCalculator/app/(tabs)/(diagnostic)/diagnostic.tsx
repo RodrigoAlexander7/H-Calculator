@@ -1,4 +1,4 @@
-import { LocationPicker } from '@/features/location/components/LocationPicker'
+import { LocationPicker } from '@/modules/location/components/LocationPicker'
 import { router } from 'expo-router'
 import { ScrollView, View } from 'react-native'
 import { Button } from 'react-native-ui-lib'

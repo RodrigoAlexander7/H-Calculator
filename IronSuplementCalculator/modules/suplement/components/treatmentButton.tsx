@@ -1,4 +1,4 @@
-import { usePatientStore } from "@/features/patient/store/patientStore";
+import { usePatientStore } from "@/modules/patient/store/patientStore";
 import dayjs from "dayjs";
 import { useState } from "react";
 import { Text } from "react-native";

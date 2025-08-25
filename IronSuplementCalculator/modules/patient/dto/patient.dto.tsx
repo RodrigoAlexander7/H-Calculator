@@ -1,4 +1,4 @@
-import { locationSchema } from '@/features/location/dto/location.dto';
+import { locationSchema } from '@/modules/location/dto/location.dto';
 import { z } from 'zod';
 
 const genderSchema =z.enum(['M','F'],'gender are just M or F');

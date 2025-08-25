@@ -1,4 +1,4 @@
-import { Patient } from '@/features/patient/dto/patient.dto';
+import { Patient } from '@/modules/patient/dto/patient.dto';
 import dayjs from 'dayjs';
 
 

@@ -1,4 +1,4 @@
-import { Patient, patientSchema } from '@/features/patient/dto/patient.dto';
+import { Patient, patientSchema } from '@/modules/patient/dto/patient.dto';
 import dayjs from 'dayjs';
 import { useState } from "react";
 

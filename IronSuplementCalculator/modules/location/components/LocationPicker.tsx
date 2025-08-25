@@ -1,7 +1,7 @@
-import { useLocationData } from '@/features/location/hooks/useLocationData';
-import { getPatientInfo } from '@/features/patient/services/patient.service';
-import { calculateDiagnostic, getPatientData } from '@/features/patient/services/patientDiagnostic.service';
-import { usePatientStore } from '@/features/patient/store/patientStore';
+import { useLocationData } from '@/modules/location/hooks/useLocationData';
+import { getPatientInfo } from '@/modules/patient/services/patient.service';
+import { calculateDiagnostic, getPatientData } from '@/modules/patient/services/patientDiagnostic.service';
+import { usePatientStore } from '@/modules/patient/store/patientStore';
 import departments from '@/utils/json/departments.json';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
